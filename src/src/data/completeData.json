@@ -2,55 +2,44 @@
   "navbar": {
     "services": [
       {
-        "title": "WINDOWS & DOORS",
-        "description": "Energy-efficient vinyl windows and premium doors that enhance beauty and insulation",
-        "icon": "Layout",
+        "title": "CASH OFFERS",
+        "description": "Get a fair, no-obligation cash offer for your home in as little as 24 hours",
+        "icon": "DollarSign",
         "items": [
-          "Vinyl Windows",
-          "Double-Hung Windows",
-          "Casement Windows",
-          "Sliding Patio Doors",
-          "Entry Doors"
+          "Same Day Offers",
+          "No Obligation Quotes",
+          "Fair Market Value",
+          "No Hidden Fees"
+        ],
+        "features": ["Cash in Hand", "No Commissions", "Fast Closing"]
+      },
+      {
+        "title": "FORECLOSURE HELP",
+        "description": "Expert assistance for homeowners facing foreclosure. Get a fresh start today.",
+        "icon": "ShieldAlert",
+        "items": [
+          "Stop Foreclosure",
+          "Short Sales",
+          "Debt Relief",
+          "Equity Extraction"
         ],
         "features": [
-          "Energy Efficient",
-          "Lifetime Warranty",
-          "Professional Installation"
+          "Stress-Free Process",
+          "Credit Protection",
+          "Fast Solutions"
         ]
       },
       {
-        "title": "DECKS & OUTDOOR LIVING",
-        "description": "Custom decks and outdoor living spaces designed for lasting beauty and durability",
-        "icon": "TreePine",
+        "title": "INHERITED PROPERTIES",
+        "description": "Sell inherited homes quickly without the hassle of repairs or renovations",
+        "icon": "Heart",
         "items": [
-          "Composite Decking",
-          "Pressure Treated Wood",
-          "Custom Designs",
-          "Covered Decks",
-          "Pergolas"
+          "Probate Properties",
+          "As-Is Purchases",
+          "Estate Sales",
+          "No Cleanup Required"
         ],
-        "features": [
-          "TimberTech Certified",
-          "50-Year Warranty",
-          "Low Maintenance"
-        ]
-      },
-      {
-        "title": "RESIDENTIAL ROOFING",
-        "description": "Expert roofing services with premium materials and 5-year workmanship guarantee",
-        "icon": "Home",
-        "items": [
-          "Asphalt Shingles",
-          "Metal Roofing",
-          "Roof Replacement",
-          "Roof Repairs",
-          "Roof Inspections"
-        ],
-        "features": [
-          "IKO Certified Pro",
-          "CertainTeed Certified",
-          "50-Year Transferable Warranty"
-        ]
+        "features": ["No Repairs Needed", "Quick Closing", "Fair Offers"]
       }
     ],
     "companyLinks": [
@@ -65,13 +54,8 @@
         "icon": "Users"
       },
       {
-        "label": "Gallery",
-        "href": "#gallery",
-        "icon": "Image"
-      },
-      {
-        "label": "Reviews",
-        "href": "#reviews",
+        "label": "Testimonials",
+        "href": "#testimonials",
         "icon": "Star"
       },
       {
@@ -88,119 +72,112 @@
     "stats": [
       {
         "value": "500+",
-        "label": "Projects",
-        "icon": "ClipboardCheck"
+        "label": "Homes Bought",
+        "icon": "Home"
       },
       {
-        "value": "50+",
-        "label": "Years Experience",
-        "icon": "Star"
-      },
-      {
-        "value": "24/7",
-        "label": "Support",
+        "value": "24hr",
+        "label": "Fast Offers",
         "icon": "Clock"
       },
       {
-        "value": "Lifetime",
-        "label": "Warranty",
+        "value": "100%",
+        "label": "Client Satisfaction",
+        "icon": "Star"
+      },
+      {
+        "value": "No Fees",
+        "label": "Zero Commissions",
         "icon": "Shield"
       }
     ],
     "cta": {
-      "title": "Get Your Free Quote",
-      "description": "Book your free consultation today and save 15%",
-      "buttonText": "Get Free Quote",
+      "title": "Get Your Cash Offer Today",
+      "description": "Fill out our simple form and get a fair cash offer within 24 hours",
+      "buttonText": "Get Cash Offer",
       "buttonLink": "#quote"
     }
   },
   "hero": {
-    "badge": "Veteran Owned & Operated",
-    "headlines": [
-      "Soaring Beyond",
-      "Expectations"
-    ],
-    "description": "One of the Top Window, Deck, and Roofing Companies in St. Louis. Veteran owned and operated with easy financing options and long-lasting transferable warranties.",
+    "badge": "Same Day Cash Offers!",
+    "headlines": ["Sell Your Home", "Get Cash Today"],
+    "description": "Need to sell your home quickly? Right Now Home Buyers provides same-day offers, ensuring a hassle-free experience. Are you in pre-foreclosure? We have tailored options to help you get paid and move on from your property today!",
     "buttons": [
       {
-        "text": "Book a FREE Quote Now",
+        "text": "Get My Offer Now",
         "href": "#contact",
         "primary": true,
-        "icon": "FiArrowRight"
+        "icon": "DollarSign"
       },
       {
-        "text": "View Our Work",
-        "href": "#portfolio",
+        "text": "How It Works",
+        "href": "#how-it-works",
         "primary": false,
-        "icon": "FiArrowRight"
+        "icon": "Info"
       }
     ],
     "stats": [
       {
-        "value": "25+",
-        "label": "Years Experience",
-        "icon": "RiBuildingLine"
+        "value": "24hr",
+        "label": "Same Day Offers",
+        "icon": "Clock"
       },
       {
-        "value": "Veteran",
-        "label": "Owned",
-        "icon": "FiStar"
+        "value": "Cash",
+        "label": "Guaranteed",
+        "icon": "DollarSign"
       },
       {
-        "value": "50-Year",
-        "label": "Warranty",
-        "icon": "FiThumbsUp"
+        "value": "No",
+        "label": "Commissions",
+        "icon": "Shield"
       },
       {
-        "value": "0%",
-        "label": "Financing",
-        "icon": "RiShieldCheckLine"
+        "value": "As-Is",
+        "label": "No Repairs",
+        "icon": "Home"
       }
-    ],
-    "promoBadge": {
-      "text": "15% off your next project if you book your free quote by the end of the month!",
-      "cta": "Book a FREE Quote Now"
-    }
+    ]
   },
   "about": {
-    "badge": "Since 2002",
+    "badge": "Michigan's Trusted Home Buyer",
     "headline": {
-      "prefix": "Soaring Beyond",
-      "highlight": "Expectations",
-      "suffix": ""
+      "prefix": "The",
+      "highlight": "Right Now Home Buyers",
+      "suffix": "Advantage"
     },
-    "description": "Eagle Revolution was founded to do more than just build roofs, windows, decks, and siding. We are here to build a movement. Born in St. Charles, Missouri, Eagle Revolution was launched by Brandon Anderson, a U.S. Army veteran and globally licensed combat sports official who brings battlefield discipline and boardroom precision to every project.",
+    "description": "At Right Now Home Buyers, we make selling your home easy with Cash Right Now! We understand the importance of a quick cash sale, so we eliminate the stress and delays of working with traditional real estate agents. Ready to connect with a local investor who can provide a fair cash offer? Simply fill out our form today and get an offer from an experienced cash buyer specializing in your area.",
     "image": {
-      "src": "EagleRevolutionTeam",
-      "alt": "Eagle Revolution team - Veteran owned roofing and exterior remodeling company",
-      "badge": "Veteran Owned"
+      "src": "RightNowTeam",
+      "alt": "Right Now Home Buyers team - Michigan cash home buyers",
+      "badge": "Cash Offers"
     },
     "stats": [
       {
         "value": 500,
         "suffix": "+",
-        "label": "Projects Completed"
+        "label": "Homes Purchased"
       },
       {
         "value": 100,
         "suffix": "%",
-        "label": "Client Satisfaction"
+        "label": "Hassle-Free"
       },
       {
-        "value": 50,
-        "suffix": "+",
-        "label": "Years Combined Experience"
+        "value": 24,
+        "suffix": "hr",
+        "label": "Fast Offers"
       }
     ],
     "buttons": [
       {
-        "text": "GET FREE ESTIMATE",
+        "text": "GET CASH OFFER",
         "href": "#contact",
         "primary": true
       },
       {
-        "text": "VIEW GALLERY",
-        "href": "#portfolio",
+        "text": "LEARN MORE",
+        "href": "#how-it-works",
         "primary": false
       }
     ],
@@ -209,35 +186,35 @@
       "emergency": "24/7"
     },
     "coreValues": [
-      "Extreme Ownership",
-      "Integrity",
-      "Humility",
-      "Customer First",
-      "Growth",
-      "Gratitude"
+      "Fast Cash",
+      "No Commissions",
+      "Transparency",
+      "Hassle-Free",
+      "Fair Offers",
+      "Local Experts"
     ]
   },
   "services": {
-    "badge": "Premium Exterior Remodeling",
+    "badge": "Sell Your Home Fast",
     "headline": {
-      "prefix": "St. Louis's Trusted",
-      "highlight": "Exterior Remodeling",
-      "suffix": "Company"
+      "prefix": "We Buy Homes In",
+      "highlight": "Any Condition",
+      "suffix": "For Cash"
     },
     "description": [
-      "Eagle Revolution provides expert exterior remodeling services for homes and businesses. From windows and doors to roofing and decks, our team delivers quality craftsmanship with military precision.",
-      "<span class=\"font-semibold text-primary\">Veteran Owned • Licensed • Insured</span>"
+      "Right Now Home Buyers specializes in buying homes that need to be sold fast. We understand the urgency and offer a quick and hassle-free process for homeowners looking to sell their properties.",
+      "<span class=\"font-semibold text-primary\">Cash Offers • No Fees • Fast Closing</span>"
     ],
     "stats": [
       {
         "value": 500,
         "suffix": "+",
-        "label": "Projects"
+        "label": "Homes"
       },
       {
-        "value": 50,
-        "suffix": "+",
-        "label": "Years Combined"
+        "value": 24,
+        "suffix": "hr",
+        "label": "Offers"
       },
       {
         "value": 4.9,
@@ -248,182 +225,156 @@
     "services": [
       {
         "number": "01",
-        "title": "Residential Roofing",
-        "description": "Expert roofing services for homes using premium materials from IKO and CertainTeed. Full replacement, repairs, and inspections with 50-year transferable warranties.",
-        "icon": "Home",
-        "tag": "Roofing",
-        "features": [
-          "Asphalt Shingles",
-          "Metal Roofing",
-          "Roof Replacement",
-          "Emergency Repairs"
-        ]
+        "title": "Same Day Cash Offers",
+        "description": "Get a fair, no-obligation cash offer within 24 hours. No waiting, no uncertainty—just a straightforward solution to sell your home fast.",
+        "icon": "DollarSign",
+        "tag": "Cash",
+        "features": ["24-Hour Offers", "No Obligation", "Fair Market Value"]
       },
       {
         "number": "02",
-        "title": "Windows & Doors",
-        "description": "Energy-efficient vinyl windows and premium doors that enhance curb appeal and reduce energy costs. ProVia Certified Installer.",
-        "icon": "Layout",
-        "tag": "Windows",
-        "features": [
-          "Vinyl Windows",
-          "Patio Doors",
-          "Entry Doors",
-          "Energy Efficient"
-        ]
+        "title": "Foreclosure Prevention",
+        "description": "Facing foreclosure? We provide tailored options to help you get paid and move on from your property. Stop the stress and get a fresh start.",
+        "icon": "Shield",
+        "tag": "Foreclosure",
+        "features": ["Stop Foreclosure", "Credit Protection", "Debt Relief"]
       },
       {
         "number": "03",
-        "title": "Custom Decks",
-        "description": "Beautiful, low-maintenance decks designed for outdoor living. TimberTech/Azek Certified installers for premium composite decking.",
-        "icon": "TreePine",
-        "tag": "Decks",
-        "features": [
-          "Composite Decking",
-          "Custom Designs",
-          "Pergolas",
-          "Covered Decks"
-        ]
+        "title": "We Buy As-Is Homes",
+        "description": "No repairs needed. We buy homes in any condition—fixer-uppers, outdated properties, or homes needing major renovations.",
+        "icon": "Home",
+        "tag": "As-Is",
+        "features": ["No Repairs", "No Cleaning", "No Inspections"]
       },
       {
         "number": "04",
-        "title": "Siding, Soffit & Fascia",
-        "description": "Protect your home and enhance curb appeal with professional siding, soffit, and fascia installation and repair services.",
-        "icon": "Building2",
-        "tag": "Siding",
-        "features": [
-          "Vinyl Siding",
-          "Soﬀit Installation",
-          "Fascia Repair",
-          "Gutter Systems"
-        ]
+        "title": "Inherited Property Solutions",
+        "description": "Sell inherited homes quickly without the stress of repairs, probate delays, or carrying costs. Get cash fast and move on.",
+        "icon": "Heart",
+        "tag": "Inherited",
+        "features": ["Probate Help", "Estate Sales", "Quick Closing"]
       },
       {
         "number": "05",
-        "title": "Commercial Roofing",
-        "description": "Specialized commercial roofing solutions including TPO and EPDM systems. Installation, repair, and maintenance for businesses.",
-        "icon": "Building",
-        "tag": "Commercial",
+        "title": "Avoid Realtor Commissions",
+        "description": "Sell directly to us and save thousands in realtor commissions and closing costs. What you see is what you get.",
+        "icon": "Percent",
+        "tag": "No Fees",
         "features": [
-          "TPO Roofing",
-          "EPDM Systems",
-          "Maintenance Programs",
-          "Large Scale Projects"
+          "Zero Commissions",
+          "No Closing Costs",
+          "More Cash for You"
         ]
       },
       {
         "number": "06",
-        "title": "Gutters & Protection",
-        "description": "Professional gutter installation and gutter protection systems to prevent water damage and maintain proper drainage.",
-        "icon": "Droplets",
-        "tag": "Gutters",
-        "features": [
-          "Seamless Gutters",
-          "Gutter Guards",
-          "Downspouts",
-          "Leaf Protection"
-        ]
+        "title": "Rental Property Exit",
+        "description": "Done being a landlord? Sell your rental property fast with our hassle-free cash offer. No tenants to evict, no repairs needed.",
+        "icon": "Building",
+        "tag": "Investors",
+        "features": ["Tenant-Occupied OK", "Quick Cash Out", "No Showings"]
       }
     ],
     "cta": {
-      "title": "Ready for Your Free Estimate?",
-      "description": "Transform your home with St. Louis's expert builders. Contact us today for quality craftsmanship and unparalleled service.",
-      "buttonText": "Get Free Estimate",
+      "title": "Ready for Your Cash Offer?",
+      "description": "Fill out our simple 3-step form and get a fair cash offer today. No obligations, no hidden fees—just a fast, hassle-free sale.",
+      "buttonText": "Get Cash Offer",
       "buttonLink": "#contact"
     }
   },
   "leadership": {
     "section": {
-      "badge": "Our Leadership",
-      "headline": "Veteran-Owned & <span class=\"font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80\">Mission-Driven</span>",
-      "description": "Battlefield discipline meets boardroom precision. Eagle Revolution brings honor, integrity, and craftsmanship back to the remodeling industry."
+      "badge": "Our Team",
+      "headline": "Local Experts Committed to <span class=\"font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80\">Helping Homeowners</span>",
+      "description": "We're Michigan-based investors who understand the local market and are dedicated to providing fair, fast solutions for homeowners in any situation."
     },
     "ceo": {
-      "name": "Brandon Anderson",
-      "title": "Founder • U.S. Army Veteran",
-      "image": "brandon",
-      "alt": "Brandon Anderson - Founder, Eagle Revolution",
+      "name": "Ricky",
+      "title": "Founder • Right Now Home Buyers",
+      "image": "ricky",
+      "alt": "Ricky - Founder, Right Now Home Buyers",
       "badges": {
-        "top": "VETERAN OWNED",
-        "bottom": "ProVia • IKO • CertainTeed"
+        "top": "LOCAL EXPERT",
+        "bottom": "Michigan • Cash Offers"
       },
       "quotes": [
-        "Eagle Revolution was founded to do more than just build roofs, windows, decks, and siding. We are here to build a movement. Born in St. Charles, Missouri, I launched Eagle Revolution to bring battlefield discipline and boardroom precision to every project."
+        "Right Now Home Buyers was founded to help homeowners find real solutions when they need them most. We're here to make selling your home fast, fair, and hassle-free."
       ],
       "description": [
-        "With years of high-level leadership experience at some of the largest home improvement companies in North America, Brandon saw firsthand how the industry had lost its way. It had become driven by profit margins instead of people.",
-        "Eagle Revolution is the local force that fights back. We go toe-to-toe with billion-dollar corporations and win—not with gimmicks or flash, but with fire, integrity, and a relentless commitment to the customer."
+        "With years of experience in the Michigan real estate market, Ricky saw how traditional home selling left many homeowners struggling with delays, repairs, and high commissions.",
+        "Right Now Home Buyers is the solution—a trusted, reliable partner that delivers cash quickly and effortlessly. Every day, we help homeowners find real solutions that fit their unique situation—no gimmicks, no delays, and no unnecessary headaches."
       ],
       "social": {
         "linkedin": "#",
-        "email": "banderson@eaglerevolution.com"
+        "email": "ricky@rnhbuyers.com"
       }
     }
   },
   "portfolio": {
     "section": {
-      "badge": "Our Work",
-      "headline": "Precision & <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70\">Craftsmanship</span>"
+      "badge": "Success Stories",
+      "headline": "Homes We've <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70\">Helped Sell</span>"
     },
     "projects": [
       {
         "number": "01",
-        "title": "St. Charles Custom Deck",
-        "category": "Deck Installation",
-        "image": "deck1",
-        "location": "St. Charles, MO",
+        "title": "Canton Family Home",
+        "category": "Cash Purchase",
+        "image": "home1",
+        "location": "Canton, MI",
         "year": "2024",
         "accent": "from-primary to-primary/80",
-        "scope": "Composite Decking",
-        "desc": "Beautiful TimberTech composite deck with custom pergola and built-in seating for outdoor entertaining."
+        "scope": "Same Day Offer",
+        "desc": "Helped a family avoid foreclosure with a fast cash offer and 14-day closing."
       },
       {
         "number": "02",
-        "title": "Window Replacement Project",
-        "category": "Windows",
-        "image": "windows1",
-        "location": "O'Fallon, MO",
+        "title": "Inherited Property",
+        "category": "Estate Sale",
+        "image": "home2",
+        "location": "Livonia, MI",
         "year": "2024",
         "accent": "from-primary to-primary/70",
-        "scope": "30+ Windows",
-        "desc": "Complete vinyl window replacement for energy efficiency and improved curb appeal."
+        "scope": "As-Is Purchase",
+        "desc": "Bought an inherited home as-is, saving the family from costly repairs and probate delays."
       },
       {
         "number": "03",
-        "title": "Residential Roof Replacement",
-        "category": "Roofing",
-        "image": "roof1",
-        "location": "St. Louis, MO",
+        "title": "Fixer-Upper Sale",
+        "category": "As-Is",
+        "image": "home3",
+        "location": "Westland, MI",
         "year": "2024",
         "accent": "from-primary/90 to-primary/60",
-        "scope": "Full Replacement",
-        "desc": "Complete roof replacement using CertainTeed architectural shingles with 50-year warranty."
+        "scope": "No Repairs",
+        "desc": "Purchased a fixer-upper in any condition—no repairs, no cleaning, just a fair cash offer."
       },
       {
         "number": "04",
-        "title": "Commercial TPO Roof",
-        "category": "Commercial",
-        "image": "commercial1",
-        "location": "St. Charles, MO",
+        "title": "Rental Property Exit",
+        "category": "Investor Sale",
+        "image": "home4",
+        "location": "Plymouth, MI",
         "year": "2023",
         "accent": "from-primary to-primary/80",
-        "scope": "TPO Installation",
-        "desc": "Large-scale commercial TPO roofing system for enhanced energy efficiency and durability."
+        "scope": "Tenant-Occupied",
+        "desc": "Bought a rental property with tenants, allowing the owner to cash out quickly."
       },
       {
         "number": "05",
-        "title": "Siding & Gutter Upgrade",
-        "category": "Exterior",
-        "image": "siding1",
-        "location": "St. Louis County, MO",
+        "title": "Pre-Foreclosure Rescue",
+        "category": "Foreclosure Help",
+        "image": "home5",
+        "location": "Wayne County, MI",
         "year": "2024",
         "accent": "from-primary/80 to-primary/60",
-        "scope": "Full Exterior",
-        "desc": "Complete siding, soffit, fascia, and gutter replacement for improved protection and aesthetics."
+        "scope": "Fast Closing",
+        "desc": "Helped a homeowner stop foreclosure and get cash in hand in just 10 days."
       }
     ],
     "button": {
-      "text": "View All Projects",
+      "text": "View All Success Stories",
       "link": "#portfolio"
     }
   },
@@ -431,64 +382,64 @@
     "section": {
       "badge": "Client Testimonials",
       "headline": "What Our Clients Say",
-      "description": "Real stories from real clients about their experience with Eagle Revolution",
+      "description": "Real stories from homeowners who sold their homes fast with Right Now Home Buyers",
       "featured": "⭐️⭐️⭐️⭐️⭐️ Rated on Google"
     },
     "testimonials": [
       {
         "id": 1,
-        "name": "Jason K.",
+        "name": "Sarah",
         "position": "Homeowner",
-        "company": "St. Louis",
-        "avatar": "JK",
+        "company": "Canton, MI",
+        "avatar": "S",
         "videoId": null,
         "duration": null,
         "views": null,
-        "text": "Eagle Revolution is top-notch. The owner is one of the hardest-working, most professional people you'll meet. His attention to detail and pride in his work really stand out — you can tell he truly cares about doing things the right way. He's reliable, respectful, and easy to work with — the kind of person you can trust to get the job done right."
+        "text": "Right Now Home Buyers gave me the fresh start I desperately needed. I was facing foreclosure, overwhelmed by the stress and uncertainty, but their team made the whole process so easy. They bought my home quickly, and I didn't have to worry about repairs or fees. I'm so thankful for their professionalism and understanding. If you're struggling, don't hesitate—this company truly cares!"
       },
       {
         "id": 2,
-        "name": "Nathan Gearing",
+        "name": "Michael",
         "position": "Homeowner",
-        "company": "St. Charles",
-        "avatar": "NG",
+        "company": "Livonia, MI",
+        "avatar": "M",
         "videoId": null,
         "duration": null,
         "views": null,
-        "text": "I had the pleasure of working with Eagle Revolution for a recent construction project, and I couldn't be more impressed with their professionalism, quality of work, and attention to detail. From the initial consultation to project completion, the team was communicative, punctual, and dedicated to getting the job done right."
+        "text": "Right Now Home Buyers really came to my rescue when I was behind on my mortgage and facing foreclosure. The team was incredibly understanding, professional, and fast. They made the entire process easy, and I closed on my home in just a couple of weeks. I'm so relieved to have this behind me and to have a fresh start. Thank you!"
       },
       {
         "id": 3,
-        "name": "Lucas Barth",
+        "name": "Rachel",
         "position": "Homeowner",
-        "company": "O'Fallon",
-        "avatar": "LB",
+        "company": "Westland, MI",
+        "avatar": "R",
         "videoId": null,
         "duration": null,
         "views": null,
-        "text": "Eagle Revolution did a great job at my house with over 30 window replacements. There was clear, transparent and timely communication through the entire process and the installation went really well. I will recommend Brandon and Eagle Revolution to anyone looking for windows."
+        "text": "I can't thank Right Now Home Buyers enough for helping me avoid foreclosure. Their cash offer was fair, and they closed on my home faster than I ever imagined. No hidden fees, no long delays—just a quick and easy sale. Now I'm free to move forward with my life. If you're in a tough spot, they're the ones to call!"
       },
       {
         "id": 4,
-        "name": "Sarah Mitchell",
+        "name": "David",
         "position": "Homeowner",
-        "company": "St. Louis County",
-        "avatar": "SM",
+        "company": "Plymouth, MI",
+        "avatar": "D",
         "videoId": null,
         "duration": null,
         "views": null,
-        "text": "Brandon and his team replaced our roof after storm damage. They handled everything with the insurance company and made the process stress-free. The quality of work is outstanding and the new roof looks amazing!"
+        "text": "I inherited my parents' home and didn't know what to do with it. Right Now Home Buyers made the whole process simple. They bought it as-is, handled all the paperwork, and I had cash in hand in less than two weeks. Highly recommend!"
       },
       {
         "id": 5,
-        "name": "Mike Thompson",
-        "position": "Business Owner",
-        "company": "St. Peters",
-        "avatar": "MT",
+        "name": "Jennifer",
+        "position": "Homeowner",
+        "company": "Canton, MI",
+        "avatar": "J",
         "videoId": null,
         "duration": null,
         "views": null,
-        "text": "We hired Eagle Revolution for a commercial TPO roof installation. Professional, on time, and within budget. Highly recommend their commercial roofing services."
+        "text": "Best decision I ever made was calling Right Now Home Buyers. No realtor fees, no waiting months for a buyer. Got a fair cash offer and closed in 10 days. The team was professional, kind, and truly helpful."
       }
     ],
     "videos": [],
@@ -500,81 +451,77 @@
   },
   "whyChooseUs": {
     "section": {
-      "badge": "WHY CHOOSE EAGLE REVOLUTION",
-      "headline": "The Trusted Choice for <span class=\"text-primary\">Exterior Remodeling</span>",
-      "description": "Customers choose Eagle Revolution for their exterior remodeling projects because they trust a local, veteran-owned and operated company that prioritizes quality and reliability."
+      "badge": "WHY CHOOSE RIGHT NOW HOME BUYERS",
+      "headline": "The Trusted Choice for <span class=\"text-primary\">Fast Home Sales</span>",
+      "description": "Homeowners choose Right Now Home Buyers because we deliver fair cash offers, fast closings, and a truly hassle-free experience."
     },
     "features": [
       {
-        "icon": "Veteran",
-        "title": "Veteran-Owned & Operated",
-        "description": "We bring military precision, discipline, and integrity to every job. Battlefield discipline meets boardroom precision."
+        "icon": "DollarSign",
+        "title": "Fair Cash Offers",
+        "description": "We provide competitive, no-obligation cash offers based on your home's true value—no lowball offers, no games."
       },
       {
-        "icon": "Experience",
-        "title": "50+ Years Combined Experience",
-        "description": "Our leadership and crews deliver consistent excellence across every project with decades of industry expertise."
+        "icon": "Clock",
+        "title": "Same Day Offers",
+        "description": "Get a cash offer within 24 hours of submitting your information. No waiting weeks for a response."
       },
       {
-        "icon": "Warranty",
-        "title": "Lifetime & Transferable Warranties",
-        "description": "Premium products backed by 50-year transferable warranties and a Five-Year Workmanship Guarantee on every project."
+        "icon": "Shield",
+        "title": "Zero Commissions & Fees",
+        "description": "Sell directly to us and save thousands in realtor commissions, closing costs, and hidden fees. What you see is what you get."
       },
       {
-        "icon": "Financing",
-        "title": "Easy & Affordable Financing",
-        "description": "Flexible financing options and payment plans make high-quality exterior upgrades accessible for all homeowners."
+        "icon": "Home",
+        "title": "Buy Homes As-Is",
+        "description": "No repairs, no cleaning, no staging. We buy homes in any condition—fixer-uppers, outdated properties, or homes needing major work."
       },
       {
-        "icon": "Certified",
-        "title": "Certified Expertise",
-        "description": "ProVia Certified Installer, IKO Certified Pro, CertainTeed Certified Shingle Master, and TimberTech/Azek Certified."
+        "icon": "Heart",
+        "title": "Foreclosure & Probate Experts",
+        "description": "Specialized experience helping homeowners facing foreclosure or selling inherited properties. We understand your situation."
       },
       {
-        "icon": "Community",
-        "title": "Community Commitment",
-        "description": "We give back through local initiatives and donate a free roof every year to a family in need."
+        "icon": "Building",
+        "title": "Local Michigan Experts",
+        "description": "We know the Michigan market inside and out. Our local expertise ensures a smooth transaction and fair pricing."
       }
     ],
     "stats": [
       {
         "value": "500",
         "suffix": "+",
-        "label": "Projects"
+        "label": "Homes Bought"
       },
       {
-        "value": "50",
-        "suffix": "+",
-        "label": "Years Combined"
+        "value": "24",
+        "suffix": "hr",
+        "label": "Fast Offers"
       },
       {
         "value": "100",
         "suffix": "%",
-        "label": "Satisfaction"
+        "label": "Hassle-Free"
       },
       {
-        "value": "Lifetime",
-        "suffix": "",
-        "label": "Warranty"
+        "value": "No",
+        "suffix": "Fees",
+        "label": "Zero Commissions"
       }
     ],
     "cta": {
-      "badge": "15% OFF",
-      "title": "Book Your Free Quote <span class=\"text-primary block mt-2\">By End of Month!</span>",
-      "description": "Transform your home with St. Louis's expert builders. Contact us today for quality craftsmanship and unparalleled service.",
-      "trustBadges": [
-        "Veteran Owned",
-        "Licensed",
-        "Insured"
-      ],
+      "badge": "GET CASH NOW",
+      "title": "Sell Your Home <span class=\"text-primary block mt-2\">In Just Days!</span>",
+      "description": "Fill out our simple 3-step form and get a fair cash offer today. No obligations, no hidden fees—just a fast, hassle-free sale.",
+      "trustBadges": ["Local Experts", "Cash Offers", "No Fees"],
       "buttons": [
         {
-          "text": "Get Free Estimate",
+          "text": "Get Cash Offer",
           "href": "#contact",
           "primary": true
         },
         {
-          "text": "View Gallery",
+          "text": "Success Stories",
           "href": "#portfolio",
           "primary": false
         }
@@ -585,7 +532,7 @@
     "section": {
       "badge": "Knowledge Base",
       "headline": "Frequently Asked Questions",
-      "description": "Answers to common questions about our exterior remodeling services in St. Louis."
+      "description": "Answers to common questions about selling your home fast for cash in Michigan."
     },
     "categories": [
       {
@@ -599,67 +546,62 @@
         "icon": "Home"
       },
       {
-        "id": "roofing",
-        "label": "Roofing",
-        "icon": "Home"
+        "id": "process",
+        "label": "Process",
+        "icon": "Clock"
       },
       {
-        "id": "windows",
-        "label": "Windows & Doors",
-        "icon": "Layout"
+        "id": "foreclosure",
+        "label": "Foreclosure",
+        "icon": "Shield"
       },
       {
-        "id": "decks",
-        "label": "Decks",
-        "icon": "TreePine"
+        "id": "inherited",
+        "label": "Inherited",
+        "icon": "Heart"
       }
     ],
     "items": [
       {
         "id": 1,
         "category": "general",
-        "question": "What services do you offer?",
-        "answer": "We offer a range of services including residential roofing, commercial roofing, vinyl windows, entry doors, custom decks, siding, soffit, fascia, and gutters. We're your complete exterior remodeling solution in St. Louis.",
+        "question": "How does the process work?",
+        "answer": "It's simple! 1) Fill out our online form with basic details about your property. 2) We review your submission and provide a fair cash offer within 24 hours. 3) If you accept, we handle everything—paperwork, closing, and you get paid in as little as a few days!",
         "metadata": [
           {
-            "label": "Services",
-            "value": "Roofing, Windows, Decks, Siding"
+            "label": "Timeline",
+            "value": "24hr offer, 7-14 day close"
           }
         ],
         "links": [
           {
-            "label": "View all services",
-            "url": "/services"
+            "label": "Get started",
+            "url": "/quote"
           }
         ]
       },
       {
         "id": 2,
         "category": "general",
-        "question": "Do you provide free estimates?",
-        "answer": "Yes, we provide free inspections and estimates for all projects. Book your free quote today and get 15% off your project if you schedule by the end of the month!",
+        "question": "Do I need to make repairs before selling?",
+        "answer": "No! We buy homes as-is. Whether your home needs major repairs, is outdated, or just needs a little TLC, we'll buy it in its current condition. No inspections, no repairs, no cleaning required.",
         "metadata": [
           {
-            "label": "Service",
-            "value": "Free estimates"
+            "label": "Condition",
+            "value": "Any condition accepted"
           }
         ],
-        "links": [
-          {
-            "label": "Get free estimate",
-            "url": "/estimate"
-          }
-        ]
+        "links": []
       },
       {
         "id": 3,
         "category": "general",
-        "question": "Are you licensed and insured?",
-        "answer": "Absolutely. We are fully licensed, bonded, and insured to ensure you receive professional and secure services. We're also IKO Certified Pro, CertainTeed Certified Shingle Master, and ProVia Certified Installers.",
+        "question": "Are there any fees or commissions?",
+        "answer": "Absolutely not. We pay all closing costs and there are zero realtor commissions. The offer we make is the amount you walk away with—no hidden fees, no surprises.",
         "metadata": [
           {
-            "label": "Status",
-            "value": "Licensed & Insured"
+            "label": "Fees",
+            "value": "$0"
           }
         ],
         "links": []
@@ -667,69 +609,69 @@
       {
         "id": 4,
         "category": "general",
-        "question": "Do you offer financing or payment plans?",
-        "answer": "Yes, we offer flexible financing options and convenient payment plans to make your project affordable and stress-free. We partner with some of the largest financing companies in the country to provide easy approval options.",
+        "question": "How fast can you close?",
+        "answer": "We can close in as little as 7-14 days, depending on your timeline. Need to close faster? We can work with you to accommodate urgent situations.",
         "metadata": [
           {
-            "label": "Financing",
-            "value": "Available"
-          }
-        ],
-        "links": [
-          {
-            "label": "Get preapproved",
-            "url": "/financing"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "category": "roofing",
-        "question": "How long does a roof replacement take?",
-        "answer": "Most residential roof replacements are completed within 1-3 days, depending on the size of your home and weather conditions. Larger or commercial projects may take longer. We'll provide a detailed timeline during your free estimate.",
-        "metadata": [
-          {
-            "label": "Timeline",
-            "value": "1-3 days"
+            "label": "Fastest close",
+            "value": "7 days"
           }
         ],
         "links": []
       },
       {
-        "id": 6,
-        "category": "roofing",
-        "question": "What warranties do you offer on roofing?",
-        "answer": "We install premium materials backed by 50-year transferable manufacturer warranties. Additionally, every project includes our Five-Year Workmanship Guarantee, giving you peace of mind long after installation.",
+        "id": 5,
+        "category": "foreclosure",
+        "question": "Can you help if I'm facing foreclosure?",
+        "answer": "Yes! We specialize in helping homeowners facing foreclosure. We can help you stop the foreclosure process, get cash for your home, and move on with a fresh start. Contact us immediately to discuss your options.",
         "metadata": [
           {
-            "label": "Warranty",
-            "value": "50-year + Workmanship"
+            "label": "Service",
+            "value": "Foreclosure help"
+          }
+        ],
+        "links": [
+          {
+            "label": "Get help now",
+            "url": "/contact"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "category": "inherited",
+        "question": "How do I sell an inherited property?",
+        "answer": "Selling an inherited home is simple with us. We'll buy the property as-is, handle all the paperwork, and help navigate any probate issues. You don't need to clean out the house or make any repairs—just accept our cash offer and we'll take care of the rest.",
+        "metadata": [
+          {
+            "label": "Inherited",
+            "value": "Specialized help"
           }
         ],
         "links": []
       },
       {
         "id": 7,
-        "category": "windows",
-        "question": "What types of windows do you install?",
-        "answer": "We install premium vinyl windows including double-hung, casement, sliding, and bay windows. As ProVia Certified Installers, we ensure professional installation and energy-efficient products that reduce your utility bills.",
+        "category": "process",
+        "question": "Is the cash offer really no-obligation?",
+        "answer": "Yes! Our offers are completely no-obligation. You're free to review our offer, compare it to other options, and make the best decision for your situation. No pressure, no gimmicks.",
         "metadata": [
           {
-            "label": "Types",
-            "value": "Vinyl, Double-hung, Casement"
+            "label": "Obligation",
+            "value": "None"
           }
         ],
         "links": []
       },
       {
         "id": 8,
-        "category": "decks",
-        "question": "What decking materials do you use?",
-        "answer": "As TimberTech/Azek Certified installers, we specialize in premium composite decking that offers durability, low maintenance, and beautiful aesthetics. We also offer pressure-treated wood options for traditional decks.",
+        "category": "process",
+        "question": "What areas do you serve?",
+        "answer": "We serve the entire Metro Detroit area including Wayne County, Oakland County, Macomb County, and surrounding Michigan communities. Contact us to see if we buy homes in your area.",
         "metadata": [
           {
-            "label": "Materials",
-            "value": "Composite, Wood"
+            "label": "Service Area",
+            "value": "Metro Detroit & SE Michigan"
           }
         ],
         "links": []
@@ -737,12 +679,12 @@
       {
         "id": 9,
         "category": "general",
-        "question": "What areas do you serve?",
-        "answer": "We serve Missouri (St. Louis County, St. Louis City, St. Charles County, Jefferson County, Franklin County) and Illinois (Saint Clair County, Monroe County, Madison County).",
+        "question": "Do you buy homes with tenants?",
+        "answer": "Yes! If you're a landlord looking to sell a rental property, we'll buy it even with tenants in place. No need to evict or wait for leases to end.",
         "metadata": [
           {
-            "label": "Service Area",
-            "value": "Greater St. Louis Region"
+            "label": "Tenants",
+            "value": "OK"
           }
         ],
         "links": []
@@ -750,12 +692,12 @@
       {
         "id": 10,
         "category": "general",
-        "question": "Can you handle large-scale projects?",
-        "answer": "Yes, we have the expertise and resources to handle both small and large-scale construction projects. We have a proven track record working with large federal roofing and construction projects.",
+        "question": "Will I get a fair price for my home?",
+        "answer": "Absolutely. We provide competitive cash offers based on your home's fair market value. While you may get slightly more by listing with an agent (after paying commissions and waiting months), we offer a fast, guaranteed sale with no fees and no waiting.",
         "metadata": [
           {
-            "label": "Capacity",
-            "value": "Small to Large Scale"
+            "label": "Value",
+            "value": "Fair market offers"
           }
         ],
         "links": []
@@ -763,75 +705,75 @@
     ],
     "knowledgeCard": {
       "title": "Still have questions?",
-      "description": "Our team is ready to help with your specific project needs.",
+      "description": "Our team is ready to help with your specific situation.",
       "buttonText": "Contact Our Team",
       "buttonLink": "/contact"
     }
   },
   "quote": {
     "section": {
-      "badge": "GET PREAPPROVED IN SECONDS",
-      "headline": "Request Your <span class=\"font-black italic text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/80\">Free Estimate</span>",
-      "description": "Book your free consultation today and save 15% on your next project. Veteran-owned, quality guaranteed."
+      "badge": "GET YOUR CASH OFFER IN SECONDS",
+      "headline": "Request Your <span class=\"font-black italic text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/80\">Free Cash Offer</span>",
+      "description": "Fill out our simple 3-step form and get a fair cash offer today. No obligations, no hidden fees—just a fast, hassle-free sale."
     },
     "services": [
       {
         "id": 1,
-        "title": "Residential Roofing",
-        "desc": "Asphalt shingles, metal roofing",
-        "icon": "⌗"
+        "title": "Single Family Home",
+        "desc": "Any condition accepted",
+        "icon": "🏠"
       },
       {
         "id": 2,
-        "title": "Windows & Doors",
-        "desc": "Energy-efficient vinyl windows",
-        "icon": "⎔"
+        "title": "Townhouse / Condo",
+        "desc": "Fast cash offers",
+        "icon": "🏘️"
       },
       {
         "id": 3,
-        "title": "Custom Decks",
-        "desc": "Composite & wood decking",
-        "icon": "⌖"
+        "title": "Multi-Family",
+        "desc": "Up to 4 units",
+        "icon": "🏢"
       },
       {
         "id": 4,
-        "title": "Siding & Gutters",
-        "desc": "Full exterior protection",
-        "icon": "⌘"
+        "title": "Fixer-Upper",
+        "desc": "No repairs needed",
+        "icon": "🔨"
       },
       {
         "id": 5,
-        "title": "Commercial Roofing",
-        "desc": "TPO, EPDM systems",
-        "icon": "⚡"
+        "title": "Inherited Property",
+        "desc": "Probate help available",
+        "icon": "❤️"
       },
       {
         "id": 6,
-        "title": "Free Inspection",
-        "desc": "No obligation consultation",
-        "icon": "◈"
+        "title": "Foreclosure",
+        "desc": "Stop the process",
+        "icon": "🛡️"
       }
     ],
     "projectTypes": [
       {
-        "value": "roofing",
-        "label": "Residential Roofing"
+        "value": "single-family",
+        "label": "Single Family Home"
       },
       {
-        "value": "windows",
-        "label": "Windows & Doors"
+        "value": "townhouse",
+        "label": "Townhouse / Condo"
       },
       {
-        "value": "decks",
-        "label": "Custom Deck"
+        "value": "multi-family",
+        "label": "Multi-Family (2-4 units)"
       },
       {
-        "value": "siding",
-        "label": "Siding & Gutters"
+        "value": "inherited",
+        "label": "Inherited Property"
       },
       {
-        "value": "commercial",
-        "label": "Commercial Roofing"
+        "value": "foreclosure",
+        "label": "Foreclosure Help"
       }
     ],
     "timelines": [
@@ -841,135 +783,121 @@
       },
       {
         "value": "standard",
-        "label": "Standard (1-3 months)"
+        "label": "Standard (2-4 weeks)"
       },
       {
-        "value": "planned",
-        "label": "Planned (3-6 months)"
-      },
-      {
-        "value": "future",
-        "label": "Future (6+ months)"
+        "value": "flexible",
+        "label": "Flexible (1-3 months)"
       }
     ],
-    "email": "banderson@eaglerevolution.com",
+    "email": "ricky@rnhbuyers.com",
     "success": {
       "title": "Request Received",
-      "message": "Thank you for choosing Eagle Revolution.",
-      "response": "We'll contact you within 24 hours to schedule your free estimate.",
+      "message": "Thank you for contacting Right Now Home Buyers.",
+      "response": "We'll contact you within 24 hours with your cash offer.",
       "buttonText": "Close"
     }
   },
   "footer": {
     "company": {
-      "name": "Eagle Revolution",
-      "tagline": "SOARING BEYOND EXPECTATIONS",
-      "description": "Veteran-owned and operated exterior remodeling company serving St. Louis and surrounding areas. We specialize in roofing, windows, doors, decks, and siding with premium materials and lifetime warranties."
+      "name": "Right Now Home Buyers",
+      "tagline": "SAME DAY CASH OFFERS!",
+      "description": "Michigan's trusted home buyer providing fast, fair cash offers for homes in any condition. We specialize in foreclosure help, inherited properties, and hassle-free home sales."
     },
     "services": {
       "title": "Our Services",
       "main": [
         {
-          "label": "Residential Roofing",
-          "href": "/roofing",
+          "label": "Cash Offers",
+          "href": "/cash-offers",
+          "icon": "DollarSign"
+        },
+        {
+          "label": "Foreclosure Help",
+          "href": "/foreclosure",
+          "icon": "Shield"
+        },
+        {
+          "label": "Inherited Properties",
+          "href": "/inherited",
+          "icon": "Heart"
+        },
+        {
+          "label": "As-Is Home Buying",
+          "href": "/as-is",
           "icon": "Home"
         },
         {
-          "label": "Windows & Doors",
-          "href": "/windows-doors",
-          "icon": "Layout"
-        },
-        {
-          "label": "Custom Decks",
-          "href": "/decks",
-          "icon": "TreePine"
-        },
-        {
-          "label": "Siding, Soffit & Fascia",
-          "href": "/siding",
-          "icon": "Building2"
-        },
-        {
-          "label": "Commercial Roofing",
-          "href": "/commercial-roofing",
+          "label": "Rental Property Exit",
+          "href": "/rental-property",
           "icon": "Building"
         },
         {
-          "label": "Gutters & Protection",
-          "href": "/gutters",
-          "icon": "Droplets"
+          "label": "Probate Properties",
+          "href": "/probate",
+          "icon": "FileText"
         },
         {
-          "label": "Free Estimates",
-          "href": "/estimate",
+          "label": "Free Cash Offer",
+          "href": "/offer",
           "icon": "ClipboardCheck"
-        },
-        {
-          "label": "Financing Options",
-          "href": "/financing",
-          "icon": "CreditCard"
         }
       ],
       "materials": {
-        "title": "Certifications",
+        "title": "Quick Links",
         "items": [
           {
-            "label": "ProVia Certified Installer",
-            "href": "/provia"
+            "label": "How It Works",
+            "href": "/how-it-works"
           },
           {
-            "label": "IKO Certified Pro",
-            "href": "/iko"
+            "label": "Success Stories",
+            "href": "/stories"
           },
           {
-            "label": "CertainTeed Certified",
-            "href": "/certainteed"
+            "label": "FAQ",
+            "href": "/faq"
           },
           {
-            "label": "TimberTech/Azek Certified",
-            "href": "/timbertech"
+            "label": "Contact Us",
+            "href": "/contact"
           }
         ]
       }
     },
     "contact": {
       "title": "Contact Us",
-      "email": "banderson@eaglerevolution.com",
-      "phone": "636-449-9714",
-      "address": "1077 E Terra Ln, O'fallon, MO 63366",
-      "emergency": "24/7 Emergency Service Available",
-      "areas": "Serving Missouri: St. Louis County, St. Louis City, St. Charles County, Jefferson County, Franklin County • Illinois: Saint Clair County, Monroe County, Madison County"
+      "email": "ricky@rnhbuyers.com",
+      "phone": "+1 734-205-1343",
+      "address": "46036 Michigan Ave. Suite 165 Canton, MI 48188",
+      "emergency": "24/7 Emergency Assistance Available",
+      "areas": "Serving Metro Detroit & Southeast Michigan: Wayne County, Oakland County, Macomb County, and surrounding areas."
     },
     "certifications": [
       {
-        "cert": "Veteran Owned",
-        "number": "U.S. Army",
+        "cert": "Local Experts",
+        "number": "Michigan Based",
         "icon": "Star"
       },
       {
-        "cert": "ProVia",
-        "number": "Certified Installer",
-        "icon": "Warranty"
+        "cert": "Cash Offers",
+        "number": "Same Day",
+        "icon": "Clock"
       },
       {
-        "cert": "IKO",
-        "number": "Certified Pro",
-        "icon": "Warranty"
+        "cert": "No Fees",
+        "number": "Zero Commissions",
+        "icon": "Shield"
       },
       {
-        "cert": "CertainTeed",
-        "number": "SELECT ShingleMaster",
-        "icon": "Warranty"
+        "cert": "Fast Closing",
+        "number": "7-14 Days",
+        "icon": "Rocket"
       },
       {
-        "cert": "TimberTech",
-        "number": "Azek Certified",
-        "icon": "Warranty"
-      },
-      {
-        "cert": "NRCA",
-        "number": "Member",
-        "icon": "Warranty"
+        "cert": "As-Is",
+        "number": "Any Condition",
+        "icon": "Home"
       }
     ],
     "quickLinks": [
@@ -979,47 +907,46 @@
         "icon": "Users"
       },
       {
-        "label": "Gallery",
-        "href": "/gallery",
-        "icon": "Image"
-      },
-      {
-        "label": "Reviews",
-        "href": "/reviews",
+        "label": "Success Stories",
+        "href": "/stories",
         "icon": "Star"
       },
-   
       {
-        "label": "Warranty",
-        "href": "/warranty",
-        "icon": "Shield"
+        "label": "Testimonials",
+        "href": "/testimonials",
+        "icon": "MessageSquare"
       },
       {
-        "label": "Financing",
-        "href": "/financing",
-        "icon": "CreditCard"
+        "label": "FAQ",
+        "href": "/faq",
+        "icon": "HelpCircle"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact",
+        "icon": "Phone"
       }
     ],
     "social": [
-      {
-        "platform": "Facebook",
-        "icon": "Facebook",
-        "href": "#"
-      },
       {
         "platform": "Instagram",
         "icon": "Instagram",
         "href": "#"
       },
       {
-        "platform": "Google",
-        "icon": "Google",
+        "platform": "Facebook",
+        "icon": "Facebook",
+        "href": "#"
+      },
+      {
+        "platform": "TikTok",
+        "icon": "TikTok",
         "href": "#"
       }
     ],
     "bottom": {
-      "copyright": "© 2026 Eagle Revolution",
-      "rights": "Veteran Owned & Operated. All rights reserved.",
+      "copyright": "© 2025 Right Now Home Buyers",
+      "rights": "All rights reserved.",
       "links": [
         {
           "label": "Privacy Policy",
@@ -1030,32 +957,29 @@
           "href": "/terms"
         },
         {
-          "label": "Licenses",
-          "href": "/licenses"
-        },
-        {
           "label": "Sitemap",
           "href": "/sitemap"
         }
       ],
-      "tagline": "VETERAN OWNED • INTEGRITY • CRAFTSMANSHIP"
+      "tagline": "Powered By CreativeZeth Designs"
     },
     "marquee": {
       "texts": [
-        "VETERAN OWNED & OPERATED",
-        "SOARING BEYOND EXPECTATIONS",
-        "50-YEAR TRANSFERABLE WARRANTIES",
-        "FREE ESTIMATES"
+        "SAME DAY CASH OFFERS",
+        "WE BUY HOMES AS-IS",
+        "NO REALTOR COMMISSIONS",
+        "FAST CLOSING",
+        "FORECLOSURE HELP AVAILABLE"
       ]
     }
   },
   "hours": {
-    "monday": "09:00 AM – 05:00 PM",
-    "tuesday": "09:00 AM – 05:00 PM",
-    "wednesday": "09:00 AM – 05:00 PM",
-    "thursday": "09:00 AM – 05:00 PM",
-    "friday": "09:00 AM – 05:00 PM",
-    "saturday": "Closed",
+    "monday": "09:00 AM – 06:00 PM",
+    "tuesday": "09:00 AM – 06:00 PM",
+    "wednesday": "09:00 AM – 06:00 PM",
+    "thursday": "09:00 AM – 06:00 PM",
+    "friday": "09:00 AM – 06:00 PM",
+    "saturday": "10:00 AM – 03:00 PM",
     "sunday": "Closed"
   }
 }

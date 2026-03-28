@@ -10,95 +10,82 @@
 
 @layer base {
   :root {
-    /* Background - Clean White */
+    /* Background - Pure White */
     --background: 0 0% 100%;
-    /* Foreground - Navy Blue for ALL text */
-    --foreground: 217 33% 17%;
-    /* #1A2A4A Navy Blue */
+    --foreground: 0 0% 0%; /* Pure Black Text */
 
-    /* Card - White background with Navy text */
+    /* Card */
     --card: 0 0% 100%;
-    --card-foreground: 217 33% 17%;
-    /* Navy Blue */
+    --card-foreground: 0 0% 0%;
 
     /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 217 33% 17%;
-    /* Navy Blue */
+    --popover-foreground: 0 0% 0%;
 
-    /* Primary - American Red (ACCENT color only) */
-    --primary: 0 91% 56%;
-    /* #E32B2B American Red */
+    /* Primary - Green */
+    --primary: 138 77% 27%; /* #107933 */
     --primary-foreground: 0 0% 100%;
-    /* White text on red */
 
-    /* Secondary - Navy Blue for dark sections */
-    --secondary: 217 33% 17%;
-    /* #1A2A4A Navy Blue */
+    /* Secondary - Black */
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 100%;
-    /* White text on navy */
 
-    /* Muted - Light gray background */
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
-    /* Medium gray */
+    /* Muted */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 60%;
 
-    /* Accent - Red for highlights */
-    --accent: 0 91% 56%;
+    /* Accent - Green */
+    --accent: 138 77% 27%;
     --accent-foreground: 0 0% 100%;
 
-    /* Destructive */
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
     /* Borders */
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 0 91% 56%;
-    /* Red ring focus */
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 138 77% 27%;
 
     --radius: 0.5rem;
 
-    /* Deep - Navy for dark backgrounds */
-    --deep: 217 33% 17%;
-    --surface: 0 0% 98%;
-    --surface-light: 0 0% 100%;
-    --text-dark: 217 33% 17%;
-
-    /* Sidebar - Navy Blue */
-    --sidebar-background: 217 33% 17%;
+    /* Sidebar */
+    --sidebar-background: 0 0% 0%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 0 91% 56%;
+    --sidebar-primary: 138 77% 27%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 91% 56%;
+    --sidebar-accent: 138 77% 27%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 215 25% 27%;
-    --sidebar-ring: 0 91% 56%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 138 77% 27%;
 
     /* Fonts */
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "DM Sans", sans-serif;
   }
 
-  /* Optional dark mode if needed */
+  /* Dark Mode */
   .dark {
-    --background: 217 33% 10%;
-    --foreground: 0 0% 100%;
-    --card: 217 33% 12%;
-    --card-foreground: 0 0% 100%;
-    --popover: 217 33% 12%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 0 91% 56%;
+    --background: 0 0% 10%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 14%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 14%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 138 77% 27%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 217 33% 17%;
+
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 0 91% 56%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 138 77% 27%;
     --accent-foreground: 0 0% 100%;
-    --border: 217 33% 20%;
-    --input: 217 33% 20%;
-    --ring: 0 91% 56%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 138 77% 27%;
   }
 }
 
@@ -118,7 +105,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* ALL headings default to NAVY BLUE */
   h1,
   h2,
   h3,
@@ -131,12 +117,10 @@
     line-height: 1.05;
   }
 
-  /* Paragraphs default to NAVY BLUE */
   p {
     @apply text-foreground;
   }
 
-  /* Links default to NAVY BLUE, hover to RED */
   a {
     @apply text-foreground transition-colors duration-300;
   }
@@ -196,53 +180,67 @@
     @apply grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8;
   }
 
-  /* Red to Navy gradient for special text */
   .text-gradient {
-    background: linear-gradient(135deg, #E32B2B 0%, #1A2A4A 100%);
+    background: linear-gradient(135deg, #107933 0%, #000000 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  /* Red gradient for CTAs */
   .bg-gradient-cta {
-    background: linear-gradient(135deg, #E32B2B 0%, #C41E1E 100%);
-    color: white;
+    background: linear-gradient(135deg, #107933 0%, #0c5f28 100%);
+    color: #ffffff; /* force white text */
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
   }
 
-  /* Navy gradient for dark sections */
+  .bg-green {
+    background-color: #107933;
+    color: #ffffff; /* force white text */
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Hover effect for all green buttons & CTA */
+  .bg-green:hover,
+  .bg-gradient-cta:hover {
+    background-color: #0d6428; /* slightly darker green */
+    color: #ffffff; /* text stays white */
+  }
+
   .bg-patriotic {
-    background: linear-gradient(135deg, #1A2A4A 0%, #0F1A2E 100%);
+    background: linear-gradient(135deg, #000000 0%, #1f1f1f 100%);
     color: white;
   }
 
-  .border-american {
-    border-color: #E32B2B;
+  .border-green {
+    border-color: #107933;
   }
 
   .hover-lift {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
   }
 
   .hover-lift:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    box-shadow:
+      0 10px 25px -5px rgba(16, 121, 51, 0.18),
+      0 8px 10px -6px rgba(0, 0, 0, 0.08);
   }
 
-  /* Text color utilities */
-  .text-navy {
-    color: #1A2A4A;
+  .text-black {
+    color: #000000;
   }
 
-  .text-american-red {
-    color: #E32B2B;
+  .bg-black-custom {
+    background-color: #000000;
   }
 
-  .bg-navy {
-    background-color: #1A2A4A;
-  }
-
-  .bg-american-red {
-    background-color: #E32B2B;
+  .bg-white-custom {
+    background-color: #ffffff;
   }
 }
