@@ -5,7 +5,7 @@ import {
   useTransform,
   useSpring,
   useInView,
-  AnimatePresence
+  AnimatePresence,
 } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,8 +15,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Images = {
   Hero: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-  Pattern: "https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-  Abstract: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
+  Pattern:
+    "https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  Abstract:
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
 };
 
 const Icons = {
@@ -24,66 +26,123 @@ const Icons = {
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
       <path d="M4 8h4v12H4V8z" stroke="currentColor" strokeWidth="1.5" />
       <circle cx="6" cy="4" r="2" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M10 8h4v2c.6-.8 1.5-2 3-2 2.5 0 4 1.5 4 4v8h-4v-6c0-1.5-.5-2-2-2s-2 .5-2 2v6h-4V8z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M10 8h4v2c.6-.8 1.5-2 3-2 2.5 0 4 1.5 4 4v8h-4v-6c0-1.5-.5-2-2-2s-2 .5-2 2v6h-4V8z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Twitter: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.8 9 5-.2-2.2.6-4.5 2.5-6 2.5-2 6-1.5 7.5 1 1.1-.2 2.2-.6 3-1 0 0-.5 1.7-2 3 1.1-.1 2-.5 3-1 0 0-.5 1.6-2 3z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.8 9 5-.2-2.2.6-4.5 2.5-6 2.5-2 6-1.5 7.5 1 1.1-.2 2.2-.6 3-1 0 0-.5 1.7-2 3 1.1-.1 2-.5 3-1 0 0-.5 1.6-2 3z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Instagram: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" strokeWidth="1.5" />
+      <rect
+        x="2"
+        y="2"
+        width="20"
+        height="20"
+        rx="4"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
       <circle cx="18" cy="6" r="1" fill="currentColor" />
     </svg>
   ),
   Facebook: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Google: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10c2.4 0 4.6-.85 6.3-2.28l-2.5-2.5c-.97.58-2.1.9-3.3.9-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6h-3l4 4 4-4h-3z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10c2.4 0 4.6-.85 6.3-2.28l-2.5-2.5c-.97.58-2.1.9-3.3.9-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6h-3l4 4 4-4h-3z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Mail: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <rect
+        x="2"
+        y="4"
+        width="20"
+        height="16"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path d="M22 7l-10 7L2 7" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   Phone: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Location: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <circle cx="12" cy="9" r="2.5" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   ArrowRight: () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-      <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path
+        d="M5 12h14M12 5l7 7-7 7"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
     </svg>
   ),
   Sparkle: () => (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-      <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="currentColor" />
+      <path
+        d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"
+        fill="currentColor"
+      />
     </svg>
   ),
   Infinity: () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M13.833 9.167C14.5 8.5 15.3 8 16.5 8C18.5 8 20 9.5 20 12C20 14.5 18.5 16 16.5 16C14.5 16 13 14.5 13 12C13 9.5 11.5 8 9.5 8C7.5 8 6 9.5 6 12C6 14.5 7.5 16 9.5 16C10.7 16 11.5 15.5 12.167 14.833" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path
+        d="M13.833 9.167C14.5 8.5 15.3 8 16.5 8C18.5 8 20 9.5 20 12C20 14.5 18.5 16 16.5 16C14.5 16 13 14.5 13 12C13 9.5 11.5 8 9.5 8C7.5 8 6 9.5 6 12C6 14.5 7.5 16 9.5 16C10.7 16 11.5 15.5 12.167 14.833"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
     </svg>
   ),
   Roofing: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M3 10L12 3L21 10L18 13L12 8L6 13L3 10Z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M3 10L12 3L21 10L18 13L12 8L6 13L3 10Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path d="M6 13V19H18V13" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
@@ -95,31 +154,55 @@ const Icons = {
   ),
   Repair: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M16 4L20 8L12 16H8V12L16 4Z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M16 4L20 8L12 16H8V12L16 4Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path d="M4 20H20" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   Replacement: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M20 12H4M12 4v16M4 8h16M4 16h16" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M20 12H4M12 4v16M4 8h16M4 16h16"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Residential: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M3 10L12 3L21 10L18 13L12 8L6 13L3 10Z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M3 10L12 3L21 10L18 13L12 8L6 13L3 10Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path d="M8 13V19H16V13" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   Commercial: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <rect x="4" y="8" width="16" height="12" stroke="currentColor" strokeWidth="1.5" />
+      <rect
+        x="4"
+        y="8"
+        width="16"
+        height="12"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path d="M8 8V4H16V8" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   Emergency: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M12 8v4M12 16h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path
+        d="M12 8v4M12 16h.01"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
     </svg>
   ),
   Maintenance: () => (
@@ -130,7 +213,11 @@ const Icons = {
   ),
   Warranty: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M12 2L15 9H22L17 14L19 21L12 17L5 21L7 14L2 9H9L12 2Z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M12 2L15 9H22L17 14L19 21L12 17L5 21L7 14L2 9H9L12 2Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Financing: () => (
@@ -141,28 +228,56 @@ const Icons = {
   ),
   CreditCard: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <rect
+        x="2"
+        y="5"
+        width="20"
+        height="14"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path d="M2 10h20" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   Image: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <rect
+        x="2"
+        y="4"
+        width="20"
+        height="16"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <circle cx="8" cy="10" r="2" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M22 16l-4-4-5 5-3-3-6 6" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M22 16l-4-4-5 5-3-3-6 6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   FileText: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path d="M14 2v6h6" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   Star: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
-  )
+  ),
 };
 
 const iconMap = {
@@ -184,14 +299,22 @@ const iconMap = {
   Twitter: Icons.Twitter,
   Instagram: Icons.Instagram,
   Facebook: Icons.Facebook,
-  Google: Icons.Google
+  Google: Icons.Google,
 };
 
-const ParallaxLayer = ({ children, speed = 0.05, className = "" }: { children: React.ReactNode; speed?: number; className?: string }) => {
+const ParallaxLayer = ({
+  children,
+  speed = 0.05,
+  className = "",
+}: {
+  children: React.ReactNode;
+  speed?: number;
+  className?: string;
+}) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, speed * 50]);
@@ -230,18 +353,22 @@ const QuantumParticles = () => {
             top: `${particle.y}%`,
             width: particle.size,
             height: particle.size,
-            filter: 'blur(1px)',
+            filter: "blur(1px)",
           }}
           animate={{
             y: [0, -30, 0, 30, 0],
             x: [0, 15, -15, 10, 0],
-            opacity: [particle.opacity, particle.opacity * 1.5, particle.opacity],
+            opacity: [
+              particle.opacity,
+              particle.opacity * 1.5,
+              particle.opacity,
+            ],
           }}
           transition={{
             duration: particle.duration,
             repeat: Infinity,
             delay: particle.delay,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
       ))}
@@ -250,7 +377,7 @@ const QuantumParticles = () => {
 };
 
 const NewsletterForm = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -258,7 +385,7 @@ const NewsletterForm = () => {
     e.preventDefault();
     if (email) {
       setIsSubscribed(true);
-      setEmail('');
+      setEmail("");
       setTimeout(() => setIsSubscribed(false), 3000);
     }
   };
@@ -266,13 +393,16 @@ const NewsletterForm = () => {
   return (
     <div className="relative">
       <form onSubmit={handleSubmit} className="relative">
-        <div className={`
+        <div
+          className={`
           relative flex items-center bg-muted backdrop-blur-sm rounded-full border transition-all duration-500
-          ${isFocused
-            ? 'border-primary/50 shadow-[0_0_30px_hsl(var(--primary)/0.1)]'
-            : 'border-border hover:border-border/80'
+          ${
+            isFocused
+              ? "border-primary/50 shadow-[0_0_30px_hsl(var(--primary)/0.1)]"
+              : "border-border hover:border-border/80"
           }
-        `}>
+        `}
+        >
           <input
             type="email"
             placeholder="Enter your email"
@@ -324,7 +454,8 @@ const ServiceLinks = () => {
       </h4>
       <div className="grid grid-cols-1 gap-2">
         {services.main.map((service: any) => {
-          const ServiceIcon = iconMap[service.icon as keyof typeof iconMap] || Icons.Roofing;
+          const ServiceIcon =
+            iconMap[service.icon as keyof typeof iconMap] || Icons.Roofing;
           return (
             <motion.a
               key={service.label}
@@ -380,13 +511,19 @@ const ContactInfo = () => {
           {contact.title}
         </h4>
         <div className="space-y-4">
-          <a href={`mailto:${contact.email}`} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group">
+          <a
+            href={`mailto:${contact.email}`}
+            className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
+          >
             <span className="text-muted-foreground/60 group-hover:text-primary">
               <Icons.Mail />
             </span>
             {contact.email}
           </a>
-          <a href={`tel:${contact.phone}`} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group">
+          <a
+            href={`tel:${contact.phone}`}
+            className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group"
+          >
             <span className="text-muted-foreground/60 group-hover:text-primary">
               <Icons.Phone />
             </span>
@@ -425,7 +562,8 @@ const CertificationsGrid = () => {
   return (
     <div className="grid grid-cols-2 gap-3 mt-4">
       {certifications.map((cert: any, i: number) => {
-        const CertIcon = iconMap[cert.icon as keyof typeof iconMap] || Icons.Warranty;
+        const CertIcon =
+          iconMap[cert.icon as keyof typeof iconMap] || Icons.Warranty;
         return (
           <motion.div
             key={i}
@@ -440,8 +578,12 @@ const CertificationsGrid = () => {
                 <CertIcon />
               </span>
               <div>
-                <span className="text-xs font-mono text-primary/80">{cert.cert}</span>
-                <p className="text-[10px] text-muted-foreground">{cert.number}</p>
+                <span className="text-xs font-mono text-primary/80">
+                  {cert.cert}
+                </span>
+                <p className="text-[10px] text-muted-foreground">
+                  {cert.number}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -457,7 +599,8 @@ const SocialLinks = () => {
   return (
     <div className="flex items-center gap-3">
       {social.map((socialItem: any) => {
-        const SocialIcon = iconMap[socialItem.icon as keyof typeof iconMap] || Icons.Linkedin;
+        const SocialIcon =
+          iconMap[socialItem.icon as keyof typeof iconMap] || Icons.Linkedin;
         return (
           <motion.a
             key={socialItem.platform}
@@ -532,7 +675,8 @@ const Footer = () => {
     if (!sectionRef.current || !isClient) return;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo('.footer-reveal',
+      gsap.fromTo(
+        ".footer-reveal",
         { y: 30, opacity: 0 },
         {
           y: 0,
@@ -543,9 +687,9 @@ const Footer = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 95%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }, sectionRef);
 
@@ -555,10 +699,7 @@ const Footer = () => {
   if (!isClient) return null;
 
   return (
-    <footer
-      ref={sectionRef}
-      className="relative bg-background overflow-hidden"
-    >
+    <footer ref={sectionRef} className="relative bg-background overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-[0.02]"
@@ -567,7 +708,7 @@ const Footer = () => {
               linear-gradient(to right, hsl(var(--primary)) 1px, transparent 1px),
               linear-gradient(to bottom, hsl(var(--primary)) 1px, transparent 1px)
             `,
-            backgroundSize: '60px 60px',
+            backgroundSize: "60px 60px",
           }}
         />
       </div>
@@ -607,11 +748,17 @@ const Footer = () => {
             >
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-2xl shadow-primary/30">
-                  <span className="text-primary-foreground font-bold text-sm text-center leading-tight">ER</span>
+                  <span className="text-primary-foreground font-bold text-sm text-center leading-tight">
+                    ER
+                  </span>
                 </div>
                 <div>
-                  <span className="text-foreground font-light text-lg block">{company.name}</span>
-                  <span className="text-[10px] text-primary/60 font-mono tracking-wider">{company.tagline}</span>
+                  <span className="text-foreground font-light text-lg block">
+                    {company.name}
+                  </span>
+                  <span className="text-[10px] text-primary/60 font-mono tracking-wider">
+                    {company.tagline}
+                  </span>
                 </div>
               </div>
 
@@ -631,9 +778,14 @@ const Footer = () => {
 
             <div className="flex flex-wrap gap-3 pt-2">
               {quickLinks.map((link: any) => {
-                const LinkIcon = iconMap[link.icon as keyof typeof iconMap] || Icons.Warranty;
+                const LinkIcon =
+                  iconMap[link.icon as keyof typeof iconMap] || Icons.Warranty;
                 return (
-                  <a key={link.label} href={link.href} className="text-[10px] text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-[10px] text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+                  >
                     <LinkIcon /> {link.label}
                   </a>
                 );
@@ -692,12 +844,23 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-6">
             {bottom.links.map((link: any) => (
-              <a key={link.label} href={link.href} className="hover:text-primary transition-colors">{link.label}</a>
+              <a
+                key={link.label}
+                href={link.href}
+                className="hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
             ))}
           </div>
-          <div className="text-muted-foreground/60">
+          <a
+            href="https://www.dynamicdesignsagency.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground/60 hover:text-primary transition-colors duration-300"
+          >
             <span className="font-mono">{bottom.tagline}</span>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -713,9 +876,21 @@ const Footer = () => {
           />
           <defs>
             <linearGradient id="footerWave" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.03" />
-              <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.03" />
+              <stop
+                offset="0%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.03"
+              />
+              <stop
+                offset="50%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.05"
+              />
+              <stop
+                offset="100%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.03"
+              />
             </linearGradient>
           </defs>
         </svg>

@@ -185,11 +185,7 @@
       "happyClients": 500,
       "emergency": "24/7"
     },
-    "coreValues": [
-      "Fast Cash",
-      "No Commissions",
-      "Transparency"
-    ]
+    "coreValues": ["Fast Cash", "No Commissions", "Transparency"]
   },
   "services": {
     "badge": "Sell Your Home Fast",
@@ -710,7 +706,7 @@
   "quote": {
     "section": {
       "badge": "GET YOUR CASH OFFER IN SECONDS",
-      "headline": "Request Your <span class=\"font-black italic text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/80\">Free Cash Offer</span>",
+      "headline": "Request Your <span class=\"font-black text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/80\">Free Cash Offer</span>",
       "description": "Fill out our simple 3-step form and get a fair cash offer today. No obligations, no hidden fees—just a fast, hassle-free sale."
     },
     "services": [
@@ -958,7 +954,7 @@
           "href": "/sitemap"
         }
       ],
-      "tagline": "Powered By CreativeZeth Designs"
+      "tagline": "Powered By Dynamic Designs"
     },
     "marquee": {
       "texts": [

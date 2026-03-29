@@ -227,44 +227,7 @@ export default function AboutSection() {
       className="relative bg-background overflow-hidden py-6 md:py-8 lg:py-12"
       aria-label="About Eagle Revolution"
     >
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none rotate-180">
-        <svg
-          viewBox="0 0 1440 120"
-          className="relative block w-full h-[50px] sm:h-[70px] md:h-[90px]"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <defs>
-            <linearGradient
-              id="premium-divider-header"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
-            >
-              <stop
-                offset="0%"
-                stopColor="hsl(var(--primary))"
-                stopOpacity="0.05"
-              />
-              <stop
-                offset="50%"
-                stopColor="hsl(var(--primary))"
-                stopOpacity="0.1"
-              />
-              <stop
-                offset="100%"
-                stopColor="hsl(var(--primary))"
-                stopOpacity="0.05"
-              />
-            </linearGradient>
-          </defs>
-          <path
-            fill="url(#premium-divider-header)"
-            d="M0,64L60,69.3C120,75,240,85,360,80C480,75,600,53,720,48C840,43,960,53,1080,58.7C1200,64,1320,64,1380,64L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
-          />
-        </svg>
-      </div>
+      
 
       <div className="absolute inset-0">
         <ParticlesBackground />
@@ -310,7 +273,7 @@ export default function AboutSection() {
         </>
       )}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-99">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 xl:gap-16 items-stretch ">
           <motion.div
             variants={variants}
@@ -540,42 +503,35 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none">
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-1 pointer-events-none">
         <svg
-          viewBox="0 0 1440 120"
-          className="relative block w-full h-[50px] sm:h-[70px] md:h-[90px]"
+          viewBox="0 0 1440 60"
+          className="relative block w-full h-10 md:h-12"
           preserveAspectRatio="none"
-          aria-hidden="true"
         >
+          <path
+            fill="url(#redGradient)"
+            d="M0,24L60,26.7C120,29,240,34,360,34C480,34,600,29,720,26.7C840,24,960,24,1080,26.7C1200,29,1320,34,1380,36.7L1440,39L1440,60L1380,60C1320,60,1200,60,1080,60C960,60,840,60,720,60C600,60,480,60,360,60C240,60,120,60,60,60L0,60Z"
+          />
           <defs>
-            <linearGradient
-              id="premium-divider-footer"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
-            >
+            <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop
                 offset="0%"
                 stopColor="hsl(var(--primary))"
-                stopOpacity="0.05"
+                stopOpacity="0.04"
               />
               <stop
                 offset="50%"
                 stopColor="hsl(var(--primary))"
-                stopOpacity="0.1"
+                stopOpacity="0.06"
               />
               <stop
                 offset="100%"
                 stopColor="hsl(var(--primary))"
-                stopOpacity="0.05"
+                stopOpacity="0.04"
               />
             </linearGradient>
           </defs>
-          <path
-            fill="url(#premium-divider-footer)"
-            d="M0,64L60,69.3C120,75,240,85,360,80C480,75,600,53,720,48C840,43,960,53,1080,58.7C1200,64,1320,64,1380,64L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
-          />
         </svg>
       </div>
     </section>
