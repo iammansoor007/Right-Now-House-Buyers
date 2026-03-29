@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import serviceDetail from "@/assets/fairservice.png";
+import serviceDetail from "@/assets/2-image-of-right-now-home-buyers.jpg.jpeg";
 import {
   Wrench,
   Home,
@@ -369,16 +369,16 @@ const Services = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".split-text",
-        { y: 60, opacity: 0 },
+        { y: 40, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1.2,
-          stagger: 0.15,
-          ease: "power2.out",
+          duration: 1,
+          stagger: 0.1,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 85%",
+            start: "top 80%",
             toggleActions: "play none none reverse",
           },
         },
@@ -414,22 +414,22 @@ const Services = () => {
               className="flex flex-col h-full"
             >
               <div className="inline-flex items-center gap-2 bg-primary/5 px-4 py-2 rounded-full border border-primary/10 mb-6 w-fit">
-                <Award className="w-4 w-4 text-primary" />
+                <Award className="w-4 h-4 text-primary" />
                 <span className="text-primary uppercase tracking-wider text-xs font-semibold">
                   {badge}
                 </span>
               </div>
 
-              <div className="overflow-hidden mb-4">
-                <h2 className="split-text text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+              {/* FIXED HEADING SECTION */}
+              <div className="overflow-hidden mb-6">
+                <h2 className="split-text text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.1] tracking-tight">
                   {headline.prefix}
                   <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">
                     {headline.highlight}
                   </span>
-                  <span className="block text-foreground text-4xl md:text-5xl mt-2">
-                    {headline.suffix}
-                  </span>
+                  <br />
+                  <span className="text-foreground">{headline.suffix}</span>
                 </h2>
               </div>
 
@@ -437,7 +437,7 @@ const Services = () => {
                 {description.map((text: string, idx: number) => (
                   <p
                     key={idx}
-                    className="text-muted-foreground text-lg leading-relaxed"
+                    className="text-muted-foreground text-lg leading-relaxed mb-4 last:mb-0"
                     dangerouslySetInnerHTML={{ __html: text }}
                   />
                 ))}

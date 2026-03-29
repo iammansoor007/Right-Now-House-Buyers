@@ -1,6 +1,6 @@
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef, useEffect, useState, useCallback, useMemo, memo } from "react";
-import EagleAboutImg from "@/assets/fairabout.png";
+import EagleAboutImg from "@/assets/realsection1.jpeg";
 import completeData from "../src/data/completeData.json";
 
 const Counter = memo(
@@ -224,7 +224,7 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-background overflow-hidden py-12 md:py-14 lg:py-16"
+      className="relative bg-background overflow-hidden py-6 md:py-8 lg:py-12"
       aria-label="About Eagle Revolution"
     >
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none rotate-180">
@@ -311,23 +311,23 @@ export default function AboutSection() {
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 xl:gap-16 items-stretch ">
           <motion.div
             variants={variants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             custom={0}
-            className="relative group"
+            className="relative group h-full w-full "
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-700" />
 
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-300/50">
-              <div className="relative aspect-[4/5] lg:aspect-[3/4]">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-300/50 h-full">
+              <div className="relative h-full min-h-[400px] lg:min-h-full">
                 <img
                   src={EagleAboutImg}
                   alt={image.alt}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-7000 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="eager"
                   width="800"
                   height="1000"
@@ -358,12 +358,12 @@ export default function AboutSection() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             custom={1}
-            className="space-y-8"
+            className="flex flex-col justify-center space-y-8"
           >
             <motion.div
               variants={variants}
               custom={2}
-              className="inline-flex items-center gap-2 bg-primary/5 px-4 py-2 rounded-full border border-primary/10"
+              className="inline-flex items-center gap-2 bg-primary/5 px-4 py-2 rounded-full border border-primary/10 w-fit"
             >
               <span className="text-primary text-lg">⚡</span>
               <span className="text-primary uppercase tracking-[0.2em] text-xs sm:text-sm font-bold">
@@ -535,56 +535,6 @@ export default function AboutSection() {
               {stats.map((stat: any) => (
                 <StatCard key={stat.label} {...stat} />
               ))}
-            </motion.div>
-
-            <motion.div
-              variants={variants}
-              custom={8}
-              className="flex items-center justify-between sm:justify-start sm:gap-8 pt-4"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {trustBadgesArray.map((badge, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ scale: 0, x: -20 }}
-                      animate={{ scale: 1, x: 0 }}
-                      transition={{
-                        delay: badge.delay,
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 15,
-                      }}
-                      className={`w-8 h-8 rounded-full bg-gradient-to-br ${badge.color} border-2 border-card shadow-md flex items-center justify-center text-[8px] font-bold text-primary-foreground`}
-                    >
-                      {badge.text.charAt(0)}
-                    </motion.div>
-                  ))}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-primary">
-                    {trustBadges.happyClients}+
-                  </p>
-                  <p className="text-xs text-muted-foreground">Happy Clients</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <svg
-                  className="w-8 h-8 text-primary"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z" />
-                  <path d="M10 4a1 1 0 011 1v4.586l2.707 2.707a1 1 0 01-1.414 1.414l-3-3A1 1 0 019 10V5a1 1 0 011-1z" />
-                </svg>
-                <div>
-                  <p className="text-sm font-bold text-primary">
-                    {trustBadges.emergency}
-                  </p>
-                  <p className="text-xs text-muted-foreground">Emergency</p>
-                </div>
-              </div>
             </motion.div>
           </motion.div>
         </div>

@@ -5,7 +5,7 @@ import {
   useTransform,
   useSpring,
   useInView,
-  AnimatePresence
+  AnimatePresence,
 } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,8 +15,10 @@ import completeData from "../src/data/completeData.json";
 gsap.registerPlugin(ScrollTrigger);
 
 const Images = {
-  Pattern: "https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-  Studio: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
+  Pattern:
+    "https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  Studio:
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
 };
 
 const Icons = {
@@ -24,12 +26,24 @@ const Icons = {
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
       <path d="M4 8h4v12H4V8z" stroke="currentColor" strokeWidth="1.5" />
       <circle cx="6" cy="4" r="2" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M10 8h4v2c.6-.8 1.5-2 3-2 2.5 0 4 1.5 4 4v8h-4v-6c0-1.5-.5-2-2-2s-2 .5-2 2v6h-4V8z" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M10 8h4v2c.6-.8 1.5-2 3-2 2.5 0 4 1.5 4 4v8h-4v-6c0-1.5-.5-2-2-2s-2 .5-2 2v6h-4V8z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Mail: () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-      <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <rect
+        x="2"
+        y="4"
+        width="20"
+        height="16"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
       <path d="M22 7l-10 7L2 7" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
@@ -41,33 +55,52 @@ const Icons = {
   ),
   Sparkle: () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-      <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="currentColor" />
+      <path
+        d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"
+        fill="currentColor"
+      />
     </svg>
   ),
   Award: () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="8" r="6" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M8 14l-2 6 6-2 6 2-2-6" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M8 14l-2 6 6-2 6 2-2-6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Flag: () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
       <path d="M4 2v20M4 2L20 8L4 14" stroke="currentColor" strokeWidth="1.5" />
     </svg>
-  )
+  ),
 };
 
-const ParallaxLayer = ({ children, speed = 0.1, className = "" }: { children: React.ReactNode; speed?: number; className?: string }) => {
+const ParallaxLayer = ({
+  children,
+  speed = 0.1,
+  className = "",
+}: {
+  children: React.ReactNode;
+  speed?: number;
+  className?: string;
+}) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, speed * 50]);
 
   return (
-    <motion.div ref={ref} style={{ y }} className={`absolute inset-0 will-change-transform ${className}`}>
+    <motion.div
+      ref={ref}
+      style={{ y }}
+      className={`absolute inset-0 will-change-transform ${className}`}
+    >
       {children}
     </motion.div>
   );
@@ -112,11 +145,21 @@ const CeoPortrait = () => {
               stroke="url(#ceoGradient)"
               strokeWidth="1.2"
               initial={{ pathLength: 0, opacity: 0 }}
-              animate={isHovered ? { pathLength: 1, opacity: 0.8 } : { pathLength: 0, opacity: 0 }}
+              animate={
+                isHovered
+                  ? { pathLength: 1, opacity: 0.8 }
+                  : { pathLength: 0, opacity: 0 }
+              }
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             />
             <defs>
-              <linearGradient id="ceoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient
+                id="ceoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
                 <stop offset="0%" stopColor="hsl(var(--primary))" />
                 <stop offset="100%" stopColor="hsl(var(--primary)/0.8)" />
               </linearGradient>
@@ -170,7 +213,8 @@ const Leadership = () => {
     if (!sectionRef.current || !isClient) return;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo('.leadership-reveal',
+      gsap.fromTo(
+        ".leadership-reveal",
         { y: 30, opacity: 0 },
         {
           y: 0,
@@ -181,9 +225,9 @@ const Leadership = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }, sectionRef);
 
@@ -205,7 +249,7 @@ const Leadership = () => {
               linear-gradient(to right, hsl(var(--primary)) 1px, transparent 1px),
               linear-gradient(to bottom, hsl(var(--primary)) 1px, transparent 1px)
             `,
-            backgroundSize: '80px 80px',
+            backgroundSize: "80px 80px",
           }}
         />
       </div>
@@ -242,7 +286,8 @@ const Leadership = () => {
             <div className="w-8 h-[2px] bg-gradient-to-r from-primary to-primary/30" />
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 leading-tight"
+          <h2
+            className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6 leading-tight"
             dangerouslySetInnerHTML={{ __html: section.headline }}
           />
 
@@ -270,14 +315,20 @@ const Leadership = () => {
                   <Icons.Quote />
                 </div>
                 {ceo.quotes.map((quote: string, idx: number) => (
-                  <p key={idx} className="text-muted-foreground text-base md:text-lg leading-relaxed pl-6">
+                  <p
+                    key={idx}
+                    className="text-muted-foreground text-base md:text-lg leading-relaxed pl-6"
+                  >
                     {quote}
                   </p>
                 ))}
               </div>
 
               {ceo.description.map((desc: string, idx: number) => (
-                <p key={idx} className="mt-6 space-y-3 text-muted-foreground text-sm md:text-base">
+                <p
+                  key={idx}
+                  className="mt-6 space-y-3 text-muted-foreground text-sm md:text-base"
+                >
                   {desc}
                 </p>
               ))}
@@ -301,7 +352,9 @@ const Leadership = () => {
                 >
                   <Icons.Mail />
                 </motion.a>
-                <span className="text-sm text-muted-foreground ml-2">{ceo.social.email}</span>
+                <span className="text-sm text-muted-foreground ml-2">
+                  {ceo.social.email}
+                </span>
               </div>
             </div>
           </div>

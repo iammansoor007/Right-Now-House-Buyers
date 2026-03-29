@@ -6,26 +6,43 @@ import {
   useSpring,
   useTransform,
   useScroll,
-  useInView
+  // useInView, // Unused in this snippet, but kept if needed
 } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
+// Asset Imports
+import portfolio1 from "@/assets/portfolioreal.jpeg";
+import portfolio2 from "@/assets/portfolioreal10.jpeg";
+import portfolio3 from "@/assets/portfolioreal11.jpeg";
+import portfolio4 from "@/assets/portfolioreal12.jpeg";
+import portfolio5 from "@/assets/portfolioreal2.jpeg";
+import portfolio6 from "@/assets/portfolioreal9.jpeg";
+import portfolio7 from "@/assets/portfolioreal8.jpeg";
+import portfolio8 from "@/assets/portfolioreal7.jpeg";
+import portfolio9 from "@/assets/portfolioreal6.jpeg";
+import portfolio10 from "@/assets/portfolioreal5.jpeg";
+import portfolio11 from "@/assets/portfolioreal4.jpeg";
+import portfolio12 from "@/assets/portfolioreal3.jpeg";
+
 import completeData from "../src/data/completeData.json";
 
+// Register Plugin once
 gsap.registerPlugin(ScrollTrigger);
 
-const imageMap = {
-  portfolio1,
-  portfolio2,
-  portfolio3,
-  portfolio4,
-  portfolio5
+export const imageMap: Record<string, string> = {
+  home1: portfolio1,
+  home2: portfolio2,
+  home3: portfolio3,
+  home4: portfolio4,
+  home5: portfolio5,
+  home6: portfolio6,
+  home7: portfolio7,
+  home8: portfolio8,
+  home9: portfolio9,
+  home10: portfolio10,
+  home11: portfolio11,
+  home12: portfolio12,
 };
 
 const MarqueeItem = ({ project }: { project: any }) => {
@@ -76,8 +93,8 @@ const MarqueeItem = ({ project }: { project: any }) => {
           alt={project.title}
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-            transition: 'transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)'
+            transform: isHovered ? "scale(1.1)" : "scale(1)",
+            transition: "transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)",
           }}
         />
 
@@ -110,7 +127,9 @@ const MarqueeItem = ({ project }: { project: any }) => {
 
         <div className="absolute inset-0 p-3 sm:p-4 flex flex-col justify-end">
           <span className="inline-flex items-center gap-2 bg-secondary/40 backdrop-blur-md px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-white/30 w-fit mb-1 sm:mb-2">
-            <span className={`w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-gradient-to-r ${project.accent}`} />
+            <span
+              className={`w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-gradient-to-r ${project.accent}`}
+            />
             <span className="text-[8px] sm:text-[10px] font-semibold tracking-wider text-white">
               {project.category}
             </span>
@@ -121,7 +140,9 @@ const MarqueeItem = ({ project }: { project: any }) => {
           </h3>
 
           <div className="flex items-center gap-1.5 sm:gap-2 text-white/70 text-[10px] sm:text-xs mb-0.5 sm:mb-1">
-            <span className="truncate max-w-[80px] sm:max-w-none">{project.location}</span>
+            <span className="truncate max-w-[80px] sm:max-w-none">
+              {project.location}
+            </span>
             <span className="w-0.5 sm:w-1 h-0.5 sm:h-1 rounded-full bg-white/30" />
             <span>{project.year}</span>
           </div>
@@ -140,7 +161,9 @@ const MarqueeItem = ({ project }: { project: any }) => {
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="hidden xs:block">
-                    <span className="text-white/40 text-[6px] sm:text-[8px] uppercase">Architect</span>
+                    <span className="text-white/40 text-[6px] sm:text-[8px] uppercase">
+                      Architect
+                    </span>
                     <p className="text-white text-[8px] sm:text-[10px] font-light truncate max-w-[80px] sm:max-w-none">
                       {project.architect}
                     </p>
@@ -160,7 +183,11 @@ const MarqueeItem = ({ project }: { project: any }) => {
                       stroke="currentColor"
                       strokeWidth="2"
                     >
-                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                      <path
+                        d="M5 12h14M12 5l7 7-7 7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </motion.button>
                 </div>
@@ -177,7 +204,15 @@ const MarqueeItem = ({ project }: { project: any }) => {
   );
 };
 
-const InfiniteMarquee = ({ projects, direction = "left", speed = 45 }: { projects: any[]; direction?: string; speed?: number }) => {
+const InfiniteMarquee = ({
+  projects,
+  direction = "left",
+  speed = 45,
+}: {
+  projects: any[];
+  direction?: string;
+  speed?: number;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const marqueeRef = useRef(null);
   const animationRef = useRef<any>(null);
@@ -190,7 +225,8 @@ const InfiniteMarquee = ({ projects, direction = "left", speed = 45 }: { project
     if (!marqueeRef.current) return;
 
     const marquee = marqueeRef.current;
-    const itemWidth = window.innerWidth < 640 ? 216 : window.innerWidth < 768 ? 256 : 296;
+    const itemWidth =
+      window.innerWidth < 640 ? 216 : window.innerWidth < 768 ? 256 : 296;
     const totalWidth = itemWidth * projects.length;
     const distance = direction === "left" ? -totalWidth : totalWidth;
 
@@ -199,7 +235,7 @@ const InfiniteMarquee = ({ projects, direction = "left", speed = 45 }: { project
     }
 
     gsap.set(marquee, {
-      x: direction === "left" ? 0 : -totalWidth
+      x: direction === "left" ? 0 : -totalWidth,
     });
 
     animationRef.current = gsap.to(marquee, {
@@ -211,12 +247,14 @@ const InfiniteMarquee = ({ projects, direction = "left", speed = 45 }: { project
         x: (x: string) => {
           const value = parseFloat(x);
           if (direction === "left") {
-            return value <= -totalWidth ? `${value + totalWidth}px` : `${value}px`;
+            return value <= -totalWidth
+              ? `${value + totalWidth}px`
+              : `${value}px`;
           } else {
             return value >= 0 ? `${value - totalWidth}px` : `${value}px`;
           }
-        }
-      }
+        },
+      },
     });
 
     return () => {
@@ -251,26 +289,31 @@ const InfiniteMarquee = ({ projects, direction = "left", speed = 45 }: { project
         ref={marqueeRef}
         className="flex gap-2 sm:gap-3 md:gap-4"
         style={{
-          willChange: 'transform',
-          display: 'flex',
-          flexWrap: 'nowrap',
+          willChange: "transform",
+          display: "flex",
+          flexWrap: "nowrap",
         }}
       >
         {infiniteProjects.map((project, index) => (
-          <MarqueeItem
-            key={`${project.number}-${index}`}
-            project={project}
-          />
+          <MarqueeItem key={`${project.number}-${index}`} project={project} />
         ))}
       </div>
     </div>
   );
 };
 
-const PremiumLightbox = ({ image, onClose }: { image: any; onClose: () => void }) => {
+const PremiumLightbox = ({
+  image,
+  onClose,
+}: {
+  image: any;
+  onClose: () => void;
+}) => {
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = 'unset'; };
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, []);
 
   return (
@@ -312,13 +355,13 @@ const Portfolio = () => {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 60,
     damping: 25,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   const headerParallax = useTransform(smoothProgress, [0, 1], [0, -30]);
@@ -367,7 +410,8 @@ const Portfolio = () => {
             </span>
             <div className="w-8 sm:w-10 md:w-12 h-0.5 bg-gradient-to-l from-primary to-primary/60" />
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-[1.1] tracking-tight px-2"
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-[1.1] tracking-tight px-2"
             dangerouslySetInnerHTML={{ __html: section.headline }}
           />
         </motion.div>
@@ -398,7 +442,11 @@ const Portfolio = () => {
               stroke="currentColor"
               strokeWidth="2"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M5 12h14M12 5l7 7-7 7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </button>
         </motion.div>
@@ -406,10 +454,7 @@ const Portfolio = () => {
 
       <AnimatePresence>
         {lightbox && (
-          <PremiumLightbox
-            image={lightbox}
-            onClose={() => setLightbox(null)}
-          />
+          <PremiumLightbox image={lightbox} onClose={() => setLightbox(null)} />
         )}
       </AnimatePresence>
 
@@ -424,10 +469,28 @@ const Portfolio = () => {
             d="M0,32L60,37.3C120,43,240,53,360,53.3C480,53,600,43,720,37.3C840,32,960,32,1080,37.3C1200,43,1320,53,1380,58.7L1440,64L1440,80L1380,80C1320,80,1200,80,1080,80C960,80,840,80,720,80C600,80,480,80,360,80C240,80,120,80,60,80L0,80Z"
           />
           <defs>
-            <linearGradient id="portfolioWave" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.03" />
-              <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.03" />
+            <linearGradient
+              id="portfolioWave"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop
+                offset="0%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.03"
+              />
+              <stop
+                offset="50%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.05"
+              />
+              <stop
+                offset="100%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.03"
+              />
             </linearGradient>
           </defs>
         </svg>
