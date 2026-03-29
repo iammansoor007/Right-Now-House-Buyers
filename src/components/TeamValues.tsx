@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import brandonImg from "@/assets/fairowner.jpg";
+import brandonImg from "@/assets/owner-image-of-right-now-home-buyers.jpg.jpeg";
 import completeData from "../src/data/completeData.json";
 
 gsap.registerPlugin(ScrollTrigger);
