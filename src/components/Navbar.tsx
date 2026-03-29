@@ -261,7 +261,7 @@ const Navbar = () => {
                                   }`}
                                 >
                                   <ServiceIcon
-                                    isHovered={hoveredService === service.title} 
+                                    isHovered={hoveredService === service.title}
                                   />
                                 </div>
                                 <div>
@@ -323,34 +323,6 @@ const Navbar = () => {
                             </motion.a>
                           );
                         })}
-                      </div>
-
-                      <div className="pt-6 border-t border-border">
-                        <div className="flex flex-col md:flex-row items-center justify-between bg-secondary rounded-xl p-5">
-                          <div className="flex items-center space-x-3 mb-4 md:mb-0">
-                            <div className="h-12 w-12 rounded-xl bg-primary flex items-center justify-center">
-                              <Quote className="h-5 w-5 text-primary-foreground" />
-                            </div>
-                            <div className="text-secondary-foreground">
-                              <h4 className="font-bold text-base">
-                                {cta.title}
-                              </h4>
-                              <p className="text-secondary-foreground/80 text-sm">
-                                {cta.description}
-                              </p>
-                            </div>
-                          </div>
-                          <motion.a
-                            href={cta.buttonLink}
-                            onClick={handleLinkClick}
-                            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 inline-flex items-center space-x-2"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <FileText className="h-4 w-4" />
-                            <span>{cta.buttonText}</span>
-                          </motion.a>
-                        </div>
                       </div>
                     </motion.div>
                   )}

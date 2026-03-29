@@ -62,16 +62,16 @@ const LogoText = () => {
     >
       <div className="text-center px-4">
         <div className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[0.15em] text-foreground mb-4">
-          <span style={{ color: "hsl(var(--primary))" }}>Eagle</span>{" "}
-          <span style={{ color: "hsl(var(--primary))" }}>Revolution</span>
+          <span style={{ color: "hsl(var(--primary))" }}>Right Now</span>{" "}
+          <span style={{ color: "hsl(var(--primary))" }}>Home Buyers</span>
         </div>
 
         <div className="mx-auto w-16 h-0.5 bg-primary" />
 
         <div className="mt-6 text-[10px] md:text-xs tracking-[0.25em] text-muted-foreground uppercase flex items-center justify-center gap-2">
-          <span>🇺🇸</span>
-          <span>Veteran Owned & Operated</span>
-          <span>🇺🇸</span>
+          <span>We </span>
+          <span>Buy Home</span>
+          <span>As-IS</span>
         </div>
       </div>
     </motion.div>

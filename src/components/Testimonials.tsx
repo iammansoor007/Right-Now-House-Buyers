@@ -6,7 +6,7 @@ import {
   useSpring,
   useInView,
   useMotionValue,
-  AnimatePresence
+  AnimatePresence,
 } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,15 +16,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Icons = {
   Quote: () => (
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" className="text-primary">
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="text-primary"
+    >
       <path d="M10 11H6V7H10V11Z" stroke="currentColor" strokeWidth="1.5" />
       <path d="M18 11H14V7H18V11Z" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   Verified: () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-primary">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="text-primary"
+    >
       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M8 12L11 15L16 9"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   ),
   Play: () => (
@@ -35,49 +52,101 @@ const Icons = {
   ),
   Close: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M18 6L6 18M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M18 6L6 18M6 6L18 18"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   ),
   ArrowLeft: () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-primary">
-      <path d="M19 12H5M5 12L11 18M5 12L11 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="text-primary"
+    >
+      <path
+        d="M19 12H5M5 12L11 18M5 12L11 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   ),
   ArrowRight: () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-primary">
-      <path d="M5 12H19M19 12L13 18M19 12L13 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="text-primary"
+    >
+      <path
+        d="M5 12H19M19 12L13 18M19 12L13 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   ),
   Google: () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-primary">
-      <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10c2.4 0 4.6-.85 6.3-2.28l-2.5-2.5c-.97.58-2.1.9-3.3.9-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6h-3l4 4 4-4h-3z" stroke="currentColor" strokeWidth="1.5" />
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="text-primary"
+    >
+      <path
+        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10c2.4 0 4.6-.85 6.3-2.28l-2.5-2.5c-.97.58-2.1.9-3.3.9-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6h-3l4 4 4-4h-3z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
     </svg>
   ),
   Star: () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="currentColor" strokeWidth="1.5" fill="currentColor" />
+      <path
+        d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        fill="currentColor"
+      />
     </svg>
-  )
+  ),
 };
 
-const VideoModal = ({ isOpen, onClose, videoId, title }: { isOpen: boolean; onClose: () => void; videoId: string; title: string }) => {
+const VideoModal = ({
+  isOpen,
+  onClose,
+  videoId,
+  title,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  videoId: string;
+  title: string;
+}) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
   }, [onClose]);
 
   if (!isOpen) return null;
@@ -123,7 +192,13 @@ const VideoModal = ({ isOpen, onClose, videoId, title }: { isOpen: boolean; onCl
   );
 };
 
-const VideoThumbnailCard = ({ video, onClick }: { video: any; onClick: () => void }) => {
+const VideoThumbnailCard = ({
+  video,
+  onClick,
+}: {
+  video: any;
+  onClick: () => void;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imageError, setImageError] = useState(false);
   const cardRef = useRef(null);
@@ -147,7 +222,11 @@ const VideoThumbnailCard = ({ video, onClick }: { video: any; onClick: () => voi
     >
       <div className="relative aspect-video rounded-lg md:rounded-xl overflow-hidden bg-muted shadow-md">
         <img
-          src={imageError ? 'https://via.placeholder.com/320x180?text=Eagle+Revolution' : `https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg`}
+          src={
+            imageError
+              ? "https://via.placeholder.com/320x180?text=Eagle+Revolution"
+              : `https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg`
+          }
           alt={video.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           onError={() => setImageError(true)}
@@ -178,14 +257,26 @@ const VideoThumbnailCard = ({ video, onClick }: { video: any; onClick: () => voi
       </div>
 
       <div className="mt-2 md:mt-3">
-        <h4 className="font-semibold text-foreground text-sm md:text-base line-clamp-1">{video.name}</h4>
-        <p className="text-xs md:text-sm text-muted-foreground line-clamp-1">{video.title}</p>
+        <h4 className="font-semibold text-foreground text-sm md:text-base line-clamp-1">
+          {video.name}
+        </h4>
+        <p className="text-xs md:text-sm text-muted-foreground line-clamp-1">
+          {video.title}
+        </p>
       </div>
     </motion.div>
   );
 };
 
-const TestimonialCard = ({ testimonial, isActive = false, onPlayVideo }: { testimonial: any; isActive?: boolean; onPlayVideo: (videoId: string, title: string) => void }) => {
+const TestimonialCard = ({
+  testimonial,
+  isActive = false,
+  onPlayVideo,
+}: {
+  testimonial: any;
+  isActive?: boolean;
+  onPlayVideo: (videoId: string, title: string) => void;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef(null);
 
@@ -227,16 +318,19 @@ const TestimonialCard = ({ testimonial, isActive = false, onPlayVideo }: { testi
       }}
       className="relative w-full mx-auto"
     >
-      <div className={`
+      <div
+        className={`
         relative bg-card rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-10
         border transition-all duration-300
         min-h-[320px] md:min-h-[360px] lg:min-h-[400px]
         flex flex-col
-        ${isActive
-          ? 'border-primary/30 shadow-xl shadow-primary/10'
-          : 'border-primary/10 shadow-lg shadow-primary/5'
+        ${
+          isActive
+            ? "border-primary/30 shadow-xl shadow-primary/10"
+            : "border-primary/10 shadow-lg shadow-primary/5"
         }
-      `}>
+      `}
+      >
         <div className="mb-4 md:mb-6 text-primary/40 flex-shrink-0">
           <Icons.Quote />
         </div>
@@ -315,13 +409,15 @@ const Testimonials = () => {
   const [isClient, setIsClient] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
-  const [selectedVideoTitle, setSelectedVideoTitle] = useState<string | null>(null);
+  const [selectedVideoTitle, setSelectedVideoTitle] = useState<string | null>(
+    null,
+  );
   const [showVideoModal, setShowVideoModal] = useState(false);
 
   const { section, testimonials, videos, stats } = completeData.testimonials;
 
   useEffect(() => {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = scrollbarStyles;
     document.head.appendChild(style);
     return () => style.remove();
@@ -341,7 +437,8 @@ const Testimonials = () => {
     if (!sectionRef.current || !isClient) return;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo('.reveal-element',
+      gsap.fromTo(
+        ".reveal-element",
         { y: 20, opacity: 0 },
         {
           y: 0,
@@ -352,9 +449,9 @@ const Testimonials = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }, sectionRef);
 
@@ -377,7 +474,7 @@ const Testimonials = () => {
                 linear-gradient(to right, hsl(var(--primary)) 1px, transparent 1px),
                 linear-gradient(to bottom, hsl(var(--primary)) 1px, transparent 1px)
               `,
-              backgroundSize: '40px 40px',
+              backgroundSize: "40px 40px",
             }}
           />
         </div>
@@ -388,17 +485,20 @@ const Testimonials = () => {
               {section.badge}
             </span>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-3 md:mb-4">
-              {section.headline}
-            </h2>
-
+           
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+              dangerouslySetInnerHTML={{ __html: section.headline }}
+            />
             <p className="text-sm md:text-base lg:text-lg text-muted-foreground px-4">
               {section.description}
             </p>
 
             <div className="flex items-center justify-center gap-2 mt-3 md:mt-4">
               <Icons.Google />
-              <span className="text-xs md:text-sm text-muted-foreground">{section.featured}</span>
+              <span className="text-xs md:text-sm text-muted-foreground">
+                {section.featured}
+              </span>
             </div>
 
             <div className="w-12 md:w-16 h-0.5 bg-gradient-to-r from-primary to-primary/60 mx-auto mt-4 md:mt-6 rounded-full" />
@@ -424,11 +524,13 @@ const Testimonials = () => {
             <div className="flex items-center justify-between mt-4 md:mt-6">
               <div className="flex items-center gap-2">
                 <span className="text-xs md:text-sm font-mono font-medium text-primary">
-                  {String(activeIndex + 1).padStart(2, '0')}
+                  {String(activeIndex + 1).padStart(2, "0")}
                 </span>
-                <span className="text-xs md:text-sm font-mono text-border">/</span>
+                <span className="text-xs md:text-sm font-mono text-border">
+                  /
+                </span>
                 <span className="text-xs md:text-sm font-mono text-muted-foreground">
-                  {String(testimonials.length).padStart(2, '0')}
+                  {String(testimonials.length).padStart(2, "0")}
                 </span>
               </div>
 
@@ -436,7 +538,12 @@ const Testimonials = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+                  onClick={() =>
+                    setActiveIndex(
+                      (prev) =>
+                        (prev - 1 + testimonials.length) % testimonials.length,
+                    )
+                  }
                   className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-primary/20 flex items-center justify-center hover:border-primary hover:bg-primary/5 transition-all duration-300"
                 >
                   <Icons.ArrowLeft />
@@ -445,7 +552,9 @@ const Testimonials = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveIndex((prev) => (prev + 1) % testimonials.length)}
+                  onClick={() =>
+                    setActiveIndex((prev) => (prev + 1) % testimonials.length)
+                  }
                   className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-primary/20 flex items-center justify-center hover:border-primary hover:bg-primary/5 transition-all duration-300"
                 >
                   <Icons.ArrowRight />
@@ -460,7 +569,9 @@ const Testimonials = () => {
               <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground">
                 Customer Stories
               </span>
-              <span className="text-[10px] md:text-xs text-primary ml-auto md:ml-2">{stats.totalVideos} reviews on Google</span>
+              <span className="text-[10px] md:text-xs text-primary ml-auto md:ml-2">
+                {stats.totalVideos} reviews on Google
+              </span>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
@@ -499,18 +610,11 @@ const Testimonials = () => {
                 ))}
               </div>
               <div className="text-xs md:text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">{stats.subscribers}</span> 5-star reviews
+                <span className="font-semibold text-foreground">
+                  {stats.subscribers}
+                </span>{" "}
+                5-star reviews
               </div>
-            </div>
-
-            <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm">
-              <span className="text-muted-foreground">
-                <span className="text-primary font-semibold">{stats.views}</span> total views
-              </span>
-              <span className="w-px h-3 md:h-4 bg-primary/20" />
-              <span className="text-muted-foreground">
-                <span className="text-primary font-semibold">Veteran Owned</span>
-              </span>
             </div>
           </div>
         </div>

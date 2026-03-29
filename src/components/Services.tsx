@@ -5,7 +5,7 @@ import {
   useTransform,
   useSpring,
   useInView,
-  useMotionValue
+  useMotionValue,
 } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -24,7 +24,7 @@ import {
   Award,
   ArrowRight,
   Layout,
-  Building
+  Building,
 } from "lucide-react";
 import completeData from "../src/data/completeData.json";
 
@@ -60,7 +60,12 @@ const Counter = ({ value, suffix = "" }: { value: number; suffix: string }) => {
     requestAnimationFrame(animate);
   }, [inView, value]);
 
-  return <span ref={ref} className="tabular-nums">{display}{suffix}</span>;
+  return (
+    <span ref={ref} className="tabular-nums">
+      {display}
+      {suffix}
+    </span>
+  );
 };
 
 const iconMap = {
@@ -75,7 +80,7 @@ const iconMap = {
   Hammer: Hammer,
   Square: Square,
   Layout: Layout,
-  Building: Building
+  Building: Building,
 };
 
 const CompactServiceCard = ({ service }: { service: any }) => {
@@ -96,7 +101,7 @@ const CompactServiceCard = ({ service }: { service: any }) => {
         className="absolute inset-0 bg-gradient-to-br from-primary/5 via-card to-card pointer-events-none"
         animate={{
           opacity: isHovered ? 1 : 0,
-          scale: isHovered ? 1.02 : 1
+          scale: isHovered ? 1.02 : 1,
         }}
         transition={{ duration: 0.4 }}
       />
@@ -118,12 +123,16 @@ const CompactServiceCard = ({ service }: { service: any }) => {
         </div>
         <div className="flex-1">
           <div className="flex items-center justify-between mb-1">
-            <h4 className="text-lg font-bold text-card-foreground">{service.title}</h4>
+            <h4 className="text-lg font-bold text-card-foreground">
+              {service.title}
+            </h4>
             <span className="text-[10px] font-mono tracking-wider text-primary bg-primary/5 px-2 py-1 rounded-full">
               {service.number}
             </span>
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{service.description}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+            {service.description}
+          </p>
           <motion.div
             className="flex items-center gap-2 mt-3"
             animate={isHovered ? { x: 5 } : { x: 0 }}
@@ -188,7 +197,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       style={{
         rotateX: rotateX,
         rotateY: rotateY,
-        transformPerspective: 1000
+        transformPerspective: 1000,
       }}
       className="relative h-[420px] bg-card rounded-2xl border border-border hover:border-primary transition-all duration-700 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-primary/20 group"
     >
@@ -202,8 +211,8 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
         className="absolute inset-0 rounded-2xl"
         animate={{
           boxShadow: isHovered
-            ? 'inset 0 0 0 2px hsl(var(--primary)/0.15), inset 0 0 20px hsl(var(--primary)/0.1)'
-            : 'inset 0 0 0 0px hsl(var(--primary)/0)'
+            ? "inset 0 0 0 2px hsl(var(--primary)/0.15), inset 0 0 20px hsl(var(--primary)/0.1)"
+            : "inset 0 0 0 0px hsl(var(--primary)/0)",
         }}
         transition={{ duration: 0.4 }}
       />
@@ -223,22 +232,22 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               key={i}
               className="absolute w-1 h-1 rounded-full bg-primary/30"
               initial={{
-                x: '50%',
-                y: '50%',
+                x: "50%",
+                y: "50%",
                 scale: 0,
-                opacity: 0.6
+                opacity: 0.6,
               }}
               animate={{
-                x: [`50%`, `${20 + (i * 25)}%`],
-                y: [`50%`, `${10 + (i * 20)}%`],
+                x: [`50%`, `${20 + i * 25}%`],
+                y: [`50%`, `${10 + i * 20}%`],
                 scale: [0, 1.5, 0],
-                opacity: [0, 0.3, 0]
+                opacity: [0, 0.3, 0],
               }}
               transition={{
                 duration: 1.5,
                 delay: i * 0.2,
                 repeat: Infinity,
-                repeatDelay: 0.5
+                repeatDelay: 0.5,
               }}
             />
           ))}
@@ -286,7 +295,10 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
             className="space-y-1.5 mt-2"
           >
             {service.features?.slice(0, 4).map((feature: string, i: number) => (
-              <div key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
+              <div
+                key={i}
+                className="flex items-center gap-2 text-xs text-muted-foreground"
+              >
                 <span className="w-1 h-1 bg-primary rounded-full flex-shrink-0" />
                 <span className="truncate">{feature}</span>
               </div>
@@ -305,7 +317,9 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
             className="flex items-center gap-1"
             animate={isHovered ? { x: 5 } : { x: 0 }}
           >
-            <ArrowRight className={`w-4 h-4 transition-colors ${isHovered ? 'text-primary' : 'text-muted-foreground'}`} />
+            <ArrowRight
+              className={`w-4 h-4 transition-colors ${isHovered ? "text-primary" : "text-muted-foreground"}`}
+            />
           </motion.div>
         </motion.div>
       </div>
@@ -323,25 +337,26 @@ const Services = () => {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 350,
     damping: 28,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   const clipPathLeftToRight = useTransform(
     smoothProgress,
     [0, 0.1],
-    ["inset(0% 100% 0% 0%)", "inset(0% 0% 0% 0%)"]
+    ["inset(0% 100% 0% 0%)", "inset(0% 0% 0% 0%)"],
   );
 
   const imageScale = useTransform(smoothProgress, [0, 0.1], [1.15, 1]);
   const overlayOpacity = useTransform(smoothProgress, [0, 0.08], [0.5, 0.1]);
 
-  const { badge, headline, description, stats, services, cta } = completeData.services;
+  const { badge, headline, description, stats, services, cta } =
+    completeData.services;
   const featuredService = services[0];
 
   useEffect(() => {
@@ -352,7 +367,8 @@ const Services = () => {
     if (!sectionRef.current || !isClient) return;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo('.split-text',
+      gsap.fromTo(
+        ".split-text",
         { y: 60, opacity: 0 },
         {
           y: 0,
@@ -363,9 +379,9 @@ const Services = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 85%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }, sectionRef);
 
@@ -406,17 +422,24 @@ const Services = () => {
 
               <div className="overflow-hidden mb-4">
                 <h2 className="split-text text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                  {headline.prefix}<br />
+                  {headline.prefix}
+                  <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">
                     {headline.highlight}
                   </span>
-                  <span className="block text-foreground text-4xl md:text-5xl mt-2">{headline.suffix}</span>
+                  <span className="block text-foreground text-4xl md:text-5xl mt-2">
+                    {headline.suffix}
+                  </span>
                 </h2>
               </div>
 
               <div className="overflow-hidden mt-2">
                 {description.map((text: string, idx: number) => (
-                  <p key={idx} className="text-muted-foreground text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+                  <p
+                    key={idx}
+                    className="text-muted-foreground text-lg leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: text }}
+                  />
                 ))}
               </div>
 
@@ -468,7 +491,7 @@ const Services = () => {
                     >
                       <span className="text-xs font-semibold text-primary flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-                        🇺🇸 Veteran Owned & Operated
+                        Right Now Home Buyers
                       </span>
                     </motion.div>
                   </div>
@@ -490,13 +513,19 @@ const Services = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.slice(1).map((service: any, index: number) => (
-              <ServiceCard key={service.number} service={service} index={index} />
+              <ServiceCard
+                key={service.number}
+                service={service}
+                index={index}
+              />
             ))}
           </div>
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{cta.title}</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {cta.title}
+          </h3>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
             {cta.description}
           </p>
@@ -504,7 +533,14 @@ const Services = () => {
             href={cta.buttonLink}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="
+    inline-block px-8 py-4 
+    bg-gradient-to-r from-[#107933] to-[#36B36A] 
+    text-white font-bold rounded-full 
+    shadow-lg hover:shadow-xl 
+    transition-all duration-300
+    hover:text-white
+  "
           >
             {cta.buttonText}
           </motion.a>
@@ -523,9 +559,21 @@ const Services = () => {
           />
           <defs>
             <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.04" />
-              <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.06" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.04" />
+              <stop
+                offset="0%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.04"
+              />
+              <stop
+                offset="50%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.06"
+              />
+              <stop
+                offset="100%"
+                stopColor="hsl(var(--primary))"
+                stopOpacity="0.04"
+              />
             </linearGradient>
           </defs>
         </svg>

@@ -837,7 +837,7 @@ const FAQ = () => {
           )}
         </div>
 
-        <KnowledgeCard />
+    
       </div>
     </section>
   );
